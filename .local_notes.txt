@@ -1,0 +1,23 @@
+================
+Setup
+================
+1. Install Ruby v3 (with devkit)
+2. Within the directory run:
+gem install bundler
+bundle install
+3. Copy serve.bat to the folder and run it
+
+-----------------
+Serve.bat
+-----------------
+@echo off
+
+set PORT=4000
+set URL=http://localhost:%PORT%
+
+start "Jekyll Server" cmd /k bundle exec jekyll serve --port %PORT%
+
+timeout /t 5 /nobreak >nul
+
+start "" "%URL%"
+exit
