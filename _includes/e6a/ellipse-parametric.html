@@ -203,22 +203,22 @@
     const svg = document.getElementById('pmSvg');
     const cx = 200, cy = 200, a = 140, b = 110;
 
-    // subtle background grid across whole viewBox
+    /* subtle background grid across whole viewBox */
     const grid = document.getElementById('pmGrid');
     let gridHTML = '';
     for (let gx = 20; gx <= 540; gx += 30) gridHTML += `<line x1="${gx}" y1="20" x2="${gx}" y2="480" opacity="0.35"/>`;
     for (let gy = 20; gy <= 480; gy += 30) gridHTML += `<line x1="20" y1="${gy}" x2="540" y2="${gy}" opacity="0.35"/>`;
     grid.innerHTML = gridHTML;
 
-    // mapping helpers — t is normalized 0..1 (fraction of the period);
-    // the 2*PI conversion to an actual angle happens right here.
+    /* mapping helpers — t is normalized 0..1 (fraction of the period);
+       the 2*PI conversion to an actual angle happens right here. */
     const TAU = 2 * Math.PI;
     const px = t => cx + a * Math.cos(t * TAU);
     const py = t => cy - b * Math.sin(t * TAU);
-    const xPlotY = t => 340 + t * 130;   // t axis, downward
-    const yPlotX = t => 380 + t * 130;   // t axis, rightward
+    const xPlotY = t => 340 + t * 130;   /* t axis, downward */
+    const yPlotX = t => 380 + t * 130;   /* t axis, rightward */
 
-    // build static curves
+    /* build static curves */
     const N = 200;
     let xPath = '', yPath = '';
     for (let i = 0; i <= N; i++) {
@@ -265,10 +265,10 @@
       xVal.textContent = ((x - cx) / a).toFixed(2);
       yVal.textContent = (-(y - cy) / b).toFixed(2);
 
-      // On an ellipse the x- and y-displacement from center are always moving
-      // in opposite senses (one closes in while the other swings out), except
-      // at the four axis-crossing instants. sign of cos(angle)*sin(angle)
-      // tells us which is currently doing which.
+      /* On an ellipse the x- and y-displacement from center are always moving
+         in opposite senses (one closes in while the other swings out), except
+         at the four axis-crossing instants. sign of cos(angle)*sin(angle)
+         tells us which is currently doing which. */
       const angle = t * TAU;
       const xClosingIn = Math.cos(angle) * Math.sin(angle) >= 0;
       xDirWord.textContent = xClosingIn ? 'toward center' : 'away from center';
@@ -303,11 +303,11 @@
       });
     }
 
-    // The SVG scales down on narrow viewports (width:100% + max-width), so
-    // the sphere's on-screen size shrinks with it — but the slider thumb is
-    // a plain HTML element with no innate knowledge of that scale. Measure
-    // the SVG's actual rendered width against its viewBox width and resize
-    // the thumb to match, so the two dots stay the same physical size.
+    /* The SVG scales down on narrow viewports (width:100% + max-width), so
+       the sphere's on-screen size shrinks with it — but the slider thumb is
+       a plain HTML element with no innate knowledge of that scale. Measure
+       the SVG's actual rendered width against its viewBox width and resize
+       the thumb to match, so the two dots stay the same physical size. */
     const wrap = document.getElementById('pmWrap');
     const VIEWBOX_W = 560, BASE_DOT = 18, BASE_BORDER = 3;
     function syncDotScale() {
