@@ -1,0 +1,328 @@
+<div class="pm-wrap" id="pmWrap">
+  <style>
+    #pmWrap {
+      --bg: #0f1117;
+      --panel: #171a22;
+      --grid: #262b36;
+      --axis: #454c5c;
+      --text: #dfe2ea;
+      --muted: #8891a3;
+      --ellipse: #6f8fb3;
+      --x-color: #f08c00;
+      --y-color: #1971c2;
+      --sphere: #f3ede1;
+      --sphere-shadow: #000000;
+
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+      max-width: 640px;
+      margin: 2rem auto;
+      padding: 1.75rem 1.75rem 2rem;
+      border-radius: 10px;
+      border: 1px solid var(--grid);
+      box-sizing: border-box;
+    }
+    #pmWrap * { box-sizing: border-box; }
+    #pmWrap .pm-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.15rem;
+    }
+    #pmWrap h3 {
+      font-family: 'Fraunces', Georgia, 'Iowan Old Style', serif;
+      font-weight: 500;
+      font-size: 1.35rem;
+      margin: 0 0 1.1rem;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+    #pmWrap .pm-svg-box { width: 100%; display: flex; justify-content: center; }
+    #pmWrap svg { width: 100%; height: auto; max-width: 520px; }
+    #pmWrap .pm-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      margin-top: 1.25rem;
+    }
+    #pmWrap button.pm-play {
+      background: var(--panel);
+      border: 1px solid var(--axis);
+      color: var(--text);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    #pmWrap button.pm-play:hover { border-color: var(--x-color); }
+    #pmWrap button.pm-play:focus-visible { outline: 2px solid var(--x-color); outline-offset: 2px; }
+    #pmWrap input[type="range"] {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 40px;
+      background: transparent;
+      outline: none;
+      cursor: pointer;
+    }
+    #pmWrap input[type="range"]::-webkit-slider-runnable-track {
+      height: 3px;
+      background: var(--axis);
+      border-radius: 2px;
+    }
+    #pmWrap input[type="range"]:focus-visible { outline: 2px solid var(--x-color); outline-offset: 4px; }
+    #pmWrap {
+      --pm-dot-size: 18px;
+      --pm-dot-border: 3px;
+    }
+    #pmWrap input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      box-sizing: border-box;
+      width: var(--pm-dot-size);
+      height: var(--pm-dot-size);
+      border-radius: 50%;
+      background: #ffffff;
+      border: var(--pm-dot-border) solid #2f9e44;
+      cursor: pointer;
+      margin-top: calc((var(--pm-dot-size) - 3px) / -2);
+    }
+    #pmWrap input[type="range"]::-moz-range-thumb {
+      box-sizing: border-box;
+      width: var(--pm-dot-size);
+      height: var(--pm-dot-size);
+      border-radius: 50%;
+      background: #ffffff;
+      border: var(--pm-dot-border) solid #2f9e44;
+      cursor: pointer;
+    }
+    #pmWrap input[type="range"]::-moz-range-track { background: var(--axis); height: 3px; border-radius: 2px; }
+    #pmWrap .pm-readout {
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.85rem;
+      flex-wrap: wrap;
+    }
+    #pmWrap .pm-readout b { color: var(--text); font-weight: 500; }
+    #pmWrap .pm-readout .pm-x { color: var(--x-color); }
+    #pmWrap .pm-readout .pm-y { color: var(--y-color); }
+    #pmWrap .pm-label {
+      font-size: 0.68rem;
+      fill: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #pmWrap * { transition: none !important; }
+    }
+  </style>
+
+  <h3>Tracing an ellipse</h3>
+
+  <div class="pm-svg-box">
+    <svg id="pmSvg" viewBox="0 0 560 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="pmSphereGrad" cx="35%" cy="30%" r="75%">
+          <stop offset="0%" stop-color="#ffffff"/>
+          <stop offset="45%" stop-color="var(--sphere)"/>
+          <stop offset="100%" stop-color="#a9a08e"/>
+        </radialGradient>
+        <radialGradient id="pmShadowGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="var(--sphere-shadow)" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="var(--sphere-shadow)" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <!-- grid -->
+      <g id="pmGrid" stroke="var(--grid)" stroke-width="1"></g>
+
+      <!-- axes for ellipse -->
+      <line x1="60" y1="200" x2="340" y2="200" stroke="var(--axis)" stroke-width="1"/>
+      <line x1="200" y1="90" x2="200" y2="310" stroke="var(--axis)" stroke-width="1"/>
+      <text x="310" y="214" class="pm-label" fill="var(--x-color)">x</text>
+      <text x="207" y="112" class="pm-label" fill="var(--y-color)">y</text>
+
+      <!-- ellipse path -->
+      <ellipse cx="200" cy="200" rx="140" ry="110" fill="none" stroke="var(--ellipse)" stroke-width="1.5" stroke-dasharray="3 4" opacity="0.8"/>
+
+      <!-- x(t) plot axes -->
+      <line x1="60" y1="340" x2="340" y2="340" stroke="var(--axis)" stroke-width="1"/>
+      <line x1="200" y1="340" x2="200" y2="470" stroke="var(--axis)" stroke-width="1"/>
+      <path id="pmXCurve" fill="none" stroke="var(--x-color)" stroke-width="1.75"/>
+      <text x="337" y="333" class="pm-label">x(t)</text>
+      <text x="205" y="478" class="pm-label">t &darr;</text>
+
+      <!-- y(t) plot axes -->
+      <line x1="380" y1="200" x2="510" y2="200" stroke="var(--axis)" stroke-width="1"/>
+      <line x1="380" y1="90" x2="380" y2="310" stroke="var(--axis)" stroke-width="1"/>
+      <path id="pmYCurve" fill="none" stroke="var(--y-color)" stroke-width="1.75"/>
+      <text x="380" y="83" class="pm-label">y(t)</text>
+      <text x="505" y="220" class="pm-label" text-anchor="end">t &rarr;</text>
+
+      <!-- dashed guide lines -->
+      <line id="pmGuideH" x1="0" y1="0" x2="0" y2="0" stroke="var(--muted)" stroke-width="1" stroke-dasharray="2 3" opacity="0.55"/>
+      <line id="pmGuideV" x1="0" y1="0" x2="0" y2="0" stroke="var(--muted)" stroke-width="1" stroke-dasharray="2 3" opacity="0.55"/>
+
+      <!-- markers on mini-plots -->
+      <circle id="pmXMarker" r="4" fill="#ffffff" stroke="var(--x-color)" stroke-width="2"/>
+      <circle id="pmYMarker" r="4" fill="#ffffff" stroke="var(--y-color)" stroke-width="2"/>
+
+      <!-- direction readout, bottom-right empty quadrant -->
+      <text id="pmYDirText" x="380" y="358" text-anchor="start" font-size="13" font-family="'IBM Plex Mono', ui-monospace, monospace" fill="var(--y-color)"><tspan x="380">y-axis: moving</tspan><tspan id="pmYDirWord" x="380" dy="19" font-weight="700"></tspan></text>
+      <text id="pmXDirText" x="380" y="412" text-anchor="start" font-size="13" font-family="'IBM Plex Mono', ui-monospace, monospace" fill="var(--x-color)"><tspan x="380">x-axis: moving</tspan><tspan id="pmXDirWord" x="380" dy="19" font-weight="700"></tspan></text>
+
+      <!-- sphere shadow + sphere -->
+      <ellipse id="pmShadow" rx="10" ry="4" fill="url(#pmShadowGrad)"/>
+      <circle id="pmSphere" r="7.5" fill="#ffffff" stroke="#2f9e44" stroke-width="3"/>
+    </svg>
+  </div>
+
+  <div class="pm-controls">
+    <button class="pm-play" id="pmPlay" aria-label="Play animation" type="button">
+      <svg id="pmPlayIcon" width="12" height="12" viewBox="0 0 12 12"><path d="M4 2 L10 6 L4 10 Z" fill="currentColor"/></svg>
+      <svg id="pmPauseIcon" width="12" height="12" viewBox="0 0 12 12" style="display:none"><rect x="2" y="1" width="3" height="10" fill="currentColor"/><rect x="7" y="1" width="3" height="10" fill="currentColor"/></svg>
+    </button>
+    <input type="range" id="pmSlider" min="0" max="1" step="0.002" value="0.15" aria-label="Position t along the period, from 0 to 1">
+  </div>
+
+  <div class="pm-readout">
+    <span>t = <b id="pmTVal">0.15</b></span>
+    <span class="pm-x">x = <b id="pmXVal">0.00</b></span>
+    <span class="pm-y">y = <b id="pmYVal">0.00</b></span>
+  </div>
+
+  <script>
+  (function () {
+    const svg = document.getElementById('pmSvg');
+    const cx = 200, cy = 200, a = 140, b = 110;
+
+    // subtle background grid across whole viewBox
+    const grid = document.getElementById('pmGrid');
+    let gridHTML = '';
+    for (let gx = 20; gx <= 540; gx += 30) gridHTML += `<line x1="${gx}" y1="20" x2="${gx}" y2="480" opacity="0.35"/>`;
+    for (let gy = 20; gy <= 480; gy += 30) gridHTML += `<line x1="20" y1="${gy}" x2="540" y2="${gy}" opacity="0.35"/>`;
+    grid.innerHTML = gridHTML;
+
+    // mapping helpers — t is normalized 0..1 (fraction of the period);
+    // the 2*PI conversion to an actual angle happens right here.
+    const TAU = 2 * Math.PI;
+    const px = t => cx + a * Math.cos(t * TAU);
+    const py = t => cy - b * Math.sin(t * TAU);
+    const xPlotY = t => 340 + t * 130;   // t axis, downward
+    const yPlotX = t => 380 + t * 130;   // t axis, rightward
+
+    // build static curves
+    const N = 200;
+    let xPath = '', yPath = '';
+    for (let i = 0; i <= N; i++) {
+      const t = i / N;
+      const xp = px(t), yp = xPlotY(t);
+      const yq = yPlotX(t), yy = py(t);
+      xPath += (i === 0 ? 'M' : 'L') + xp.toFixed(2) + ' ' + yp.toFixed(2) + ' ';
+      yPath += (i === 0 ? 'M' : 'L') + yq.toFixed(2) + ' ' + yy.toFixed(2) + ' ';
+    }
+    document.getElementById('pmXCurve').setAttribute('d', xPath);
+    document.getElementById('pmYCurve').setAttribute('d', yPath);
+
+    const sphere = document.getElementById('pmSphere');
+    const shadow = document.getElementById('pmShadow');
+    const guideH = document.getElementById('pmGuideH');
+    const guideV = document.getElementById('pmGuideV');
+    const xMarker = document.getElementById('pmXMarker');
+    const yMarker = document.getElementById('pmYMarker');
+    const xDirWord = document.getElementById('pmXDirWord');
+    const yDirWord = document.getElementById('pmYDirWord');
+    const tVal = document.getElementById('pmTVal');
+    const xVal = document.getElementById('pmXVal');
+    const yVal = document.getElementById('pmYVal');
+    const slider = document.getElementById('pmSlider');
+    const playBtn = document.getElementById('pmPlay');
+    const playIcon = document.getElementById('pmPlayIcon');
+    const pauseIcon = document.getElementById('pmPauseIcon');
+
+    function render(t) {
+      const x = px(t), y = py(t);
+      sphere.setAttribute('cx', x); sphere.setAttribute('cy', y);
+      shadow.setAttribute('cx', x); shadow.setAttribute('cy', y + 11);
+
+      guideH.setAttribute('x1', x); guideH.setAttribute('y1', y);
+      guideH.setAttribute('x2', 380); guideH.setAttribute('y2', y);
+
+      guideV.setAttribute('x1', x); guideV.setAttribute('y1', y);
+      guideV.setAttribute('x2', x); guideV.setAttribute('y2', 340);
+
+      xMarker.setAttribute('cx', x); xMarker.setAttribute('cy', xPlotY(t));
+      yMarker.setAttribute('cx', yPlotX(t)); yMarker.setAttribute('cy', y);
+
+      tVal.textContent = t.toFixed(3);
+      xVal.textContent = ((x - cx) / a).toFixed(2);
+      yVal.textContent = (-(y - cy) / b).toFixed(2);
+
+      // On an ellipse the x- and y-displacement from center are always moving
+      // in opposite senses (one closes in while the other swings out), except
+      // at the four axis-crossing instants. sign of cos(angle)*sin(angle)
+      // tells us which is currently doing which.
+      const angle = t * TAU;
+      const xClosingIn = Math.cos(angle) * Math.sin(angle) >= 0;
+      xDirWord.textContent = xClosingIn ? 'toward center' : 'away from center';
+      yDirWord.textContent = xClosingIn ? 'away from center' : 'toward center';
+    }
+
+    render(parseFloat(slider.value));
+    slider.addEventListener('input', () => render(parseFloat(slider.value)));
+
+    let playing = false, raf = null;
+    function frame() {
+      let t = parseFloat(slider.value) + 0.0019;
+      if (t > 1) t -= 1;
+      slider.value = t;
+      render(t);
+      raf = requestAnimationFrame(frame);
+    }
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      playBtn.disabled = true;
+      playBtn.style.opacity = '0.35';
+      playBtn.style.cursor = 'not-allowed';
+      playBtn.title = 'Animation disabled — your system prefers reduced motion';
+      playBtn.setAttribute('aria-label', 'Animation disabled due to reduced motion preference');
+    } else {
+      playBtn.addEventListener('click', () => {
+        playing = !playing;
+        playIcon.style.display = playing ? 'none' : 'inline';
+        pauseIcon.style.display = playing ? 'inline' : 'none';
+        playBtn.setAttribute('aria-label', playing ? 'Pause animation' : 'Play animation');
+        if (playing) { raf = requestAnimationFrame(frame); }
+        else if (raf) { cancelAnimationFrame(raf); }
+      });
+    }
+
+    // The SVG scales down on narrow viewports (width:100% + max-width), so
+    // the sphere's on-screen size shrinks with it — but the slider thumb is
+    // a plain HTML element with no innate knowledge of that scale. Measure
+    // the SVG's actual rendered width against its viewBox width and resize
+    // the thumb to match, so the two dots stay the same physical size.
+    const wrap = document.getElementById('pmWrap');
+    const VIEWBOX_W = 560, BASE_DOT = 18, BASE_BORDER = 3;
+    function syncDotScale() {
+      const rendered = svg.getBoundingClientRect().width;
+      if (!rendered) return;
+      const scale = rendered / VIEWBOX_W;
+      wrap.style.setProperty('--pm-dot-size', (BASE_DOT * scale).toFixed(2) + 'px');
+      wrap.style.setProperty('--pm-dot-border', Math.max(1.25, BASE_BORDER * scale).toFixed(2) + 'px');
+    }
+    syncDotScale();
+    if (window.ResizeObserver) {
+      new ResizeObserver(syncDotScale).observe(svg);
+    } else {
+      window.addEventListener('resize', syncDotScale);
+    }
+  })();
+  </script>
+</div>
