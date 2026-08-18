@@ -171,8 +171,10 @@
       <line id="pmGuideV" x1="0" y1="0" x2="0" y2="0" stroke="var(--muted)" stroke-width="1" stroke-dasharray="2 3" opacity="0.55"/>
 
       <!-- markers on mini-plots -->
-      <circle id="pmXMarker" r="4" fill="#ffffff" stroke="var(--x-color)" stroke-width="2"/>
-      <circle id="pmYMarker" r="4" fill="#ffffff" stroke="var(--y-color)" stroke-width="2"/>
+      <circle id="pmXMarker" r="4" fill="#ffffff" stroke="var(--x-color)" stroke-width="2" pointer-events="none"/>
+      <circle id="pmYMarker" r="4" fill="#ffffff" stroke="var(--y-color)" stroke-width="2" pointer-events="none"/>
+      <circle id="pmXMarkerHit" r="14" fill="transparent" style="cursor:grab; touch-action:none;"/>
+      <circle id="pmYMarkerHit" r="14" fill="transparent" style="cursor:grab; touch-action:none;"/>
 
       <!-- direction readout, bottom-right empty quadrant -->
       <text id="pmYDirText" x="380" y="358" text-anchor="start" font-size="13" font-family="'IBM Plex Mono', ui-monospace, monospace" fill="var(--y-color)"><tspan x="380">y-axis: moving</tspan><tspan id="pmYDirWord" x="380" dy="19" font-weight="700"></tspan></text>
@@ -239,6 +241,8 @@
     const guideV = document.getElementById('pmGuideV');
     const xMarker = document.getElementById('pmXMarker');
     const yMarker = document.getElementById('pmYMarker');
+    const xMarkerHit = document.getElementById('pmXMarkerHit');
+    const yMarkerHit = document.getElementById('pmYMarkerHit');
     const xDirWord = document.getElementById('pmXDirWord');
     const yDirWord = document.getElementById('pmYDirWord');
     const tVal = document.getElementById('pmTVal');
@@ -263,6 +267,8 @@
 
       xMarker.setAttribute('cx', x); xMarker.setAttribute('cy', xPlotY(t));
       yMarker.setAttribute('cx', yPlotX(t)); yMarker.setAttribute('cy', y);
+      xMarkerHit.setAttribute('cx', x); xMarkerHit.setAttribute('cy', xPlotY(t));
+      yMarkerHit.setAttribute('cx', yPlotX(t)); yMarkerHit.setAttribute('cy', y);
 
       tVal.textContent = t.toFixed(3);
       xVal.textContent = ((x - cx) / a).toFixed(2);
@@ -345,6 +351,40 @@
     }
     sphereHit.addEventListener('pointerup', endDrag);
     sphereHit.addEventListener('pointercancel', endDrag);
+
+    /* The x(t) marker only moves along its vertical t-axis (y from 340 to 470);
+       the y(t) marker only moves along its horizontal t-axis (x from 380 to 510).
+       Dragging each one scrubs t along that single axis, clamped to the plot. */
+    function clamp01(v) { return Math.max(0, Math.min(1, v)); }
+    function tFromXPlot(p) { return clamp01((p.y - 340) / 130); }
+    function tFromYPlot(p) { return clamp01((p.x - 380) / 130); }
+
+    function makeAxisDragHandlers(hitEl, tFromPoint) {
+      hitEl.addEventListener('pointerdown', (evt) => {
+        dragging = true;
+        hitEl.style.cursor = 'grabbing';
+        hitEl.setPointerCapture(evt.pointerId);
+        stopPlayback();
+        const t = tFromPoint(svgPointFromEvent(evt));
+        slider.value = t;
+        render(t);
+      });
+      hitEl.addEventListener('pointermove', (evt) => {
+        if (!dragging) return;
+        const t = tFromPoint(svgPointFromEvent(evt));
+        slider.value = t;
+        render(t);
+      });
+      function end(evt) {
+        dragging = false;
+        hitEl.style.cursor = 'grab';
+        if (evt.pointerId != null) hitEl.releasePointerCapture(evt.pointerId);
+      }
+      hitEl.addEventListener('pointerup', end);
+      hitEl.addEventListener('pointercancel', end);
+    }
+    makeAxisDragHandlers(xMarkerHit, tFromXPlot);
+    makeAxisDragHandlers(yMarkerHit, tFromYPlot);
 
     /* The SVG scales down on narrow viewports (width:100% + max-width), so
        the sphere's on-screen size shrinks with it — but the slider thumb is
