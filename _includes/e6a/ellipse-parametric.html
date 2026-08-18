@@ -286,22 +286,14 @@
       render(t);
       raf = requestAnimationFrame(frame);
     }
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      playBtn.disabled = true;
-      playBtn.style.opacity = '0.35';
-      playBtn.style.cursor = 'not-allowed';
-      playBtn.title = 'Animation disabled — your system prefers reduced motion';
-      playBtn.setAttribute('aria-label', 'Animation disabled due to reduced motion preference');
-    } else {
-      playBtn.addEventListener('click', () => {
-        playing = !playing;
-        playIcon.style.display = playing ? 'none' : 'inline';
-        pauseIcon.style.display = playing ? 'inline' : 'none';
-        playBtn.setAttribute('aria-label', playing ? 'Pause animation' : 'Play animation');
-        if (playing) { raf = requestAnimationFrame(frame); }
-        else if (raf) { cancelAnimationFrame(raf); }
-      });
-    }
+    playBtn.addEventListener('click', () => {
+      playing = !playing;
+      playIcon.style.display = playing ? 'none' : 'inline';
+      pauseIcon.style.display = playing ? 'inline' : 'none';
+      playBtn.setAttribute('aria-label', playing ? 'Pause animation' : 'Play animation');
+      if (playing) { raf = requestAnimationFrame(frame); }
+      else if (raf) { cancelAnimationFrame(raf); }
+    });
 
     /* The SVG scales down on narrow viewports (width:100% + max-width), so
        the sphere's on-screen size shrinks with it — but the slider thumb is
