@@ -180,7 +180,8 @@
 
       <!-- sphere shadow + sphere -->
       <ellipse id="pmShadow" rx="10" ry="4" fill="url(#pmShadowGrad)"/>
-      <circle id="pmSphere" r="7.5" fill="#ffffff" stroke="#2f9e44" stroke-width="3"/>
+      <circle id="pmSphere" r="7.5" fill="#ffffff" stroke="#2f9e44" stroke-width="3" pointer-events="none"/>
+      <circle id="pmSphereHit" r="20" fill="transparent" style="cursor:grab; touch-action:none;"/>
     </svg>
   </div>
 
@@ -232,6 +233,7 @@
     document.getElementById('pmYCurve').setAttribute('d', yPath);
 
     const sphere = document.getElementById('pmSphere');
+    const sphereHit = document.getElementById('pmSphereHit');
     const shadow = document.getElementById('pmShadow');
     const guideH = document.getElementById('pmGuideH');
     const guideV = document.getElementById('pmGuideV');
@@ -250,6 +252,7 @@
     function render(t) {
       const x = px(t), y = py(t);
       sphere.setAttribute('cx', x); sphere.setAttribute('cy', y);
+      sphereHit.setAttribute('cx', x); sphereHit.setAttribute('cy', y);
       shadow.setAttribute('cx', x); shadow.setAttribute('cy', y + 11);
 
       guideH.setAttribute('x1', x); guideH.setAttribute('y1', y);
@@ -294,6 +297,54 @@
       if (playing) { raf = requestAnimationFrame(frame); }
       else if (raf) { cancelAnimationFrame(raf); }
     });
+
+    /* Dragging the sphere directly: convert the pointer's screen position into
+       SVG user-space coordinates, then into the angle (and normalized t) that
+       position corresponds to on the ellipse. */
+    function svgPointFromEvent(evt) {
+      const pt = svg.createSVGPoint();
+      pt.x = evt.clientX;
+      pt.y = evt.clientY;
+      return pt.matrixTransform(svg.getScreenCTM().inverse());
+    }
+    function tFromSvgPoint(p) {
+      const X = (p.x - cx) / a;
+      const Y = (cy - p.y) / b;
+      let angle = Math.atan2(Y, X);
+      if (angle < 0) angle += TAU;
+      return angle / TAU;
+    }
+    function stopPlayback() {
+      if (!playing) return;
+      playing = false;
+      playIcon.style.display = 'inline';
+      pauseIcon.style.display = 'none';
+      playBtn.setAttribute('aria-label', 'Play animation');
+      if (raf) cancelAnimationFrame(raf);
+    }
+    let dragging = false;
+    sphereHit.addEventListener('pointerdown', (evt) => {
+      dragging = true;
+      sphereHit.style.cursor = 'grabbing';
+      sphereHit.setPointerCapture(evt.pointerId);
+      stopPlayback();
+      const t = tFromSvgPoint(svgPointFromEvent(evt));
+      slider.value = t;
+      render(t);
+    });
+    sphereHit.addEventListener('pointermove', (evt) => {
+      if (!dragging) return;
+      const t = tFromSvgPoint(svgPointFromEvent(evt));
+      slider.value = t;
+      render(t);
+    });
+    function endDrag(evt) {
+      dragging = false;
+      sphereHit.style.cursor = 'grab';
+      if (evt.pointerId != null) sphereHit.releasePointerCapture(evt.pointerId);
+    }
+    sphereHit.addEventListener('pointerup', endDrag);
+    sphereHit.addEventListener('pointercancel', endDrag);
 
     /* The SVG scales down on narrow viewports (width:100% + max-width), so
        the sphere's on-screen size shrinks with it — but the slider thumb is
