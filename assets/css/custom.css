@@ -1,0 +1,80 @@
+/* German original hover notes */
+
+.german-note {
+  display: inline;
+}
+
+.german-note-marker {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.3em;
+  color: var(--text-muted-color);
+  cursor: help;
+  white-space: nowrap;
+  border-bottom: 1px dotted var(--text-muted-color);
+  outline: none;
+}
+
+.german-note-quote {
+  font-size: 0.9em;
+}
+
+.german-note-lang {
+  margin-left: 0.04em;
+  font-size: 0.65em;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+.german-note-citation {
+  margin-left: 0.25em;
+  font-size: 0.82em;
+}
+
+/* The actual German quotation */
+
+.german-note-popup {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  bottom: calc(100% + 0.7rem);
+  width: min(32rem, 80vw);
+  padding: 0.8rem 1rem;
+
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--main-border-color);
+  border-radius: 0.45rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+
+  white-space: normal;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  transition:
+    opacity 0.12s ease,
+    visibility 0.12s ease;
+}
+
+/* Show on mouse hover and keyboard focus */
+
+.german-note-marker:hover .german-note-popup,
+.german-note-marker:focus .german-note-popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Don't let paragraph margins appear inside the popup */
+
+.german-note-popup p:first-child {
+  margin-top: 0;
+}
+
+.german-note-popup p:last-child {
+  margin-bottom: 0;
+}
