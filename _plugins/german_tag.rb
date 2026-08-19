@@ -25,14 +25,14 @@ module Jekyll
       # Render Markdown inside the quotation, if desired.
       rendered = converter.convert(text).strip
 
-      citation = @cite ? " · #{@cite}" : ""
+      citation = @cite || ""
 
       <<~HTML
         <span class="german-note">
           <span class="german-note-marker"
                 tabindex="0"
                 role="note">
-            <span class="german-note-quote">❝</span><span class="german-note-lang">DE</span><span class="german-note-citation">#{citation}</span>
+            <span class="german-note-lang">DE</span><span class="german-note-citation">#{citation}</span>
             <span class="german-note-popup">#{rendered}</span>
           </span>
         </span>
