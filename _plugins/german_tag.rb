@@ -22,7 +22,9 @@ module Jekyll
         Jekyll::Converters::Markdown
       )
 
-      # Render Markdown inside the quotation, if desired.
+      # Render Markdown inside the quotation.
+      # This intentionally preserves <p> tags so multiple
+      # paragraphs work correctly.
       rendered = converter.convert(text).strip
 
       citation = @cite || ""
@@ -33,8 +35,8 @@ module Jekyll
                 tabindex="0"
                 role="note">
             <span class="german-note-lang">DE</span><span class="german-note-citation">#{citation}</span>
-            <span class="german-note-popup">#{rendered}</span>
           </span>
+          <span class="german-note-popup">#{rendered}</span>
         </span>
       HTML
     end
