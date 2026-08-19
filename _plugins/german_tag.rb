@@ -6,6 +6,7 @@ module Jekyll
       super
       @cite = nil
 
+      # Parse: {% german cite="MEW 23:119" %}
       if markup =~ /cite\s*=\s*["']([^"']+)["']/
         @cite = Regexp.last_match(1)
       end
@@ -21,26 +22,28 @@ module Jekyll
 
       rendered = converter.convert(text).strip
 
-      citation_html = if @cite
+      # Markdown produces <p>...</p>. Since the popup lives inside
+      # an inline element, turn those paragraphs into block spans.
+      rendered = rendered
+        .gsub("<p>", '<span class="german-note-paragraph">')
+        .gsub("</p>", "</span>")
+
+      citation = if @cite
         %(<span class="german-note-citation">#{@cite}</span>)
       else
         ""
       end
 
-      html = <<~HTML
+      <<~HTML
         <span class="german-note">
           <span class="german-note-marker"
                 tabindex="0"
                 role="note">
-            <span class="german-note-lang">DE</span>
-            #{citation_html}
+            <span class="german-note-lang">DE</span>#{citation}
             <span class="german-note-popup">#{rendered}</span>
           </span>
         </span>
       HTML
-
-      # Tell Liquid/Jekyll this is already-rendered HTML.
-      Liquid::Utils.to_s(html)
     end
   end
 

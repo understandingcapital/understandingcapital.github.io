@@ -6,6 +6,7 @@
 }
 
 .german-note-marker {
+  position: relative;
   display: inline-block;
 
   cursor: help;
@@ -31,7 +32,7 @@
   opacity: 0.55;
 }
 
-/* Translation popup */
+/* The translation popup */
 
 .german-note-popup {
   visibility: hidden;
@@ -45,9 +46,6 @@
   transform: translateX(-50%);
 
   width: min(38rem, 80vw);
-  max-height: 70vh;
-  overflow-y: auto;
-
   padding: 1rem 1.2rem;
 
   color: var(--text-color);
@@ -71,20 +69,21 @@
     visibility 0.15s ease;
 }
 
-/* Paragraphs inside the translation */
+/* Markdown paragraphs */
 
-.german-note-popup p {
-  margin: 0 0 0.8rem;
+.german-note-paragraph {
+  display: block;
+  margin: 0 0 0.8em;
 }
 
-.german-note-popup p:last-child {
+.german-note-paragraph:last-child {
   margin-bottom: 0;
 }
 
-/* Show the popup when hovering the complete note */
+/* Show on hover or keyboard focus */
 
-.german-note:hover .german-note-popup,
-.german-note:focus-within .german-note-popup {
+.german-note-marker:hover .german-note-popup,
+.german-note-marker:focus .german-note-popup {
   visibility: visible;
   opacity: 1;
 }
