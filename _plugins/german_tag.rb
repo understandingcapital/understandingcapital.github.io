@@ -2,13 +2,10 @@
 
 module Jekyll
   class GermanTag < Liquid::Block
-    Syntax = /([^\s]+(?:\s+[^\s]+)*)/
-
     def initialize(tag_name, markup, tokens)
       super
       @cite = nil
 
-      # Parse: {% german cite="MEW 23:119" %}
       if markup =~ /cite\s*=\s*["']([^"']+)["']/
         @cite = Regexp.last_match(1)
       end
@@ -22,23 +19,28 @@ module Jekyll
         Jekyll::Converters::Markdown
       )
 
-      # Render Markdown inside the quotation.
-      # This intentionally preserves <p> tags so multiple
-      # paragraphs work correctly.
       rendered = converter.convert(text).strip
 
-      citation = @cite || ""
+      citation_html = if @cite
+        %(<span class="german-note-citation">#{@cite}</span>)
+      else
+        ""
+      end
 
-      <<~HTML
+      html = <<~HTML
         <span class="german-note">
           <span class="german-note-marker"
                 tabindex="0"
                 role="note">
-            <span class="german-note-lang">DE</span><span class="german-note-citation">#{citation}</span>
+            <span class="german-note-lang">DE</span>
+            #{citation_html}
+            <span class="german-note-popup">#{rendered}</span>
           </span>
-          <span class="german-note-popup">#{rendered}</span>
         </span>
       HTML
+
+      # Tell Liquid/Jekyll this is already-rendered HTML.
+      Liquid::Utils.to_s(html)
     end
   end
 
