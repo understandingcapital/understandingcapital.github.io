@@ -21,3 +21,18 @@ timeout /t 5 /nobreak >nul
 
 start "" "%URL%"
 exit
+
+
+
+
+Posting
+===============
+
+Episodes
+---------------
+
+
+Illustrations
+---------------
+Add images to /assets/img/illustrations/
+Add entry to _data/gallery.yml
