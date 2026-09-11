@@ -87,3 +87,26 @@
   visibility: visible;
   opacity: 1;
 }
+
+/* Badges for Other Podcast Hosts */
+
+.listen-badges a.badge {
+  display: inline-block !important;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.listen-badges a.badge-apple {
+	background-image: url('/assets/img/badges/apple.svg');
+	background-color: #ffffff;
+	border-radius: 8px;
+	background-size: 104%; }
+.listen-badges a.badge-amazon { background-image: url('/assets/img/badges/amazonmusic.svg'); }
+.listen-badges a.badge-castbox { background-image: url('/assets/img/badges/castbox.svg'); }
+.listen-badges a.badge-iheart { background-image: url('/assets/img/badges/iheart.webp'); }
+.listen-badges a.badge-pocketcasts { background-image: url('/assets/img/badges/pocketcasts.svg'); 
+	background-color: #ffffff;
+	border-radius: 8px;
+	background-size: 104%; }

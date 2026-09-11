@@ -38,6 +38,7 @@ social:
   fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
   links:
     # The first element serves as the copyright owner's link
+    - https://hagenblix.github.io/
     - https://bsky.app/profile/ucapital.bsky.social
     # https://github.com/username # change to your GitHub homepage
     # Uncomment below to add more social links
@@ -75,7 +76,7 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: goatcounter
+  provider: false
 
 # Prefer color scheme setting.
 #
@@ -234,3 +235,10 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+podcast_platforms:
+  apple: "https://podcasts.apple.com/us/podcast/understanding-capital/id6811184676"
+  amazon: "https://music.amazon.com/podcasts/902d5959-d929-4df7-994b-16ad787ed004/understanding-capital"
+  castbox: "https://castbox.fm/channel/id7397903"
+  iheart: "https://iheart.com/podcast/343609803/"
+  pocketcasts: "https://pocketcasts.com/podcast/understanding-capital/60cf9b00-8f5e-013f-17b6-0258a02a1e05"
