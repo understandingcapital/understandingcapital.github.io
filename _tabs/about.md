@@ -6,8 +6,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# About *Understanding Capital*
-
 An Occasionally Illustrated Read-Along Podcast for Capital Volume 1, run by [Hagen Blix](https://hagenblix.github.io/). The podcast got started in August 2026, and trails an in-person reading group I'm facilitating.
 
 The modest goal of this podcast is to help you, the listeners, to get an intellectual skill set out of engaging with this book, one that will help you develop a deeper understanding of the political situations you find yourself in - from the global context down to concrete organizing situations. This is a book one can *think with*, and that's what I want to get across.
