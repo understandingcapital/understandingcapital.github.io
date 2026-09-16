@@ -18,7 +18,7 @@ On the A-Side episodes, I'll walk you through the week's reading, aiming to make
 
 
 ## Episode Guide
-Note that this table may be ahead of the podcast release, and subject to change. Sometimes things take longer or less long than I think!
+Note that this table is likely to be ahead of the podcast's actual release, and things may or may not deviate from the plan! Things almost always take longer (or, rarely, less long) than I think!
 
 | Episode | Pages   | Chapter       |
 | ------- | ------- | ------------- |
@@ -29,6 +29,6 @@ Note that this table may be ahead of the podcast release, and subject to change.
 | 5A      | 60-69   | 2             |
 | 6A      | 69-120  | 3             |
 | 7A      | 121-149 | 4             |
-
+| 8A      | 150-173 | Chapter 5     |
 
 
