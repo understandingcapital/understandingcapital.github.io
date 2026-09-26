@@ -8,7 +8,12 @@ title: Illustrations
 <div class="gallery-grid">
   {% for item in site.data.gallery %}
   <div class="gallery-item">
-    <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
+    <a class="gallery-thumb"
+       href="{{ item.image }}"
+       target="_blank"
+       rel="noopener"
+       style="background-image: url('{{ item.image }}');"
+       aria-label="{{ item.title }}"></a>
     <div class="gallery-caption">
       <strong>{{ item.title }}</strong>
       <span><a href="{{ item.episode_url }}">{{ item.episode_title }}</a></span>
@@ -29,11 +34,13 @@ title: Illustrations
   overflow: hidden;
   border: 1px solid var(--border-color, #ddd);
 }
-.gallery-item img {
+.gallery-thumb {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .gallery-caption {
   padding: 0.6rem 0.75rem;
