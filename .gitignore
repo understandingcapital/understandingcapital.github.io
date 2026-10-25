@@ -31,3 +31,6 @@ assets/js/dist
 .DS_Store
 Thumbs.db
 serve.bat
+
+# Hide capital-reader for now
+/capital-reader/

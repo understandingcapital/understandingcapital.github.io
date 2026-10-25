@@ -1,0 +1,974 @@
+# Marx-Engels-Werke, Band 23: Das Kapital, Erster Band.
+# Dietz Verlag. Text of the fourth German edition (1890), ed. Engels.
+#
+# Transcribed from the printed table of contents and checked against the body
+# headings. Fields: id, kind, parent, number (label as printed, without
+# punctuation), title, page (where the heading is printed), author, note.
+# kind: front | book | part | part-intro | chapter | section | subsection | back
+# Untitled nodes (part intros, MEW's untitled French preface letter) omit title.
+
+- id: m-vorwort-1
+  kind: front
+  parent: null
+  title: "Vorwort zur ersten Auflage"
+  page: "11"
+  author: "Marx"
+
+- id: m-nachwort-2
+  kind: front
+  parent: null
+  title: "Nachwort zur zweiten Auflage"
+  page: "18"
+  author: "Marx"
+
+- id: m-vornachwort-fr
+  kind: front
+  parent: null
+  title: "Vor- und Nachwort zur französischen Ausgabe"
+  page: "31"
+  author: "Marx"
+
+- id: m-vornachwort-fr-1
+  kind: front
+  parent: m-vornachwort-fr
+  page: "31"
+  author: "Marx"
+  note: "Untitled: letter to Maurice La Châtre, 18 March 1872."
+
+- id: m-vornachwort-fr-2
+  kind: front
+  parent: m-vornachwort-fr
+  title: "An den Leser"
+  page: "31"
+  author: "Marx"
+  note: "Dated 28 April 1875."
+
+- id: m-vorwort-3
+  kind: front
+  parent: null
+  title: "Zur dritten Auflage"
+  page: "33"
+  author: "Engels"
+
+- id: m-vorwort-en
+  kind: front
+  parent: null
+  title: "Vorwort zur englischen Ausgabe"
+  page: "36"
+  author: "Engels"
+
+- id: m-vorwort-4
+  kind: front
+  parent: null
+  title: "Zur vierten Auflage"
+  page: "41"
+  author: "Engels"
+
+- id: m-buch1
+  kind: book
+  parent: null
+  number: "Erstes"
+  title: "Der Produktionsprozeß des Kapitals"
+  page: "47"
+
+# ---- m-p1
+- id: m-p1
+  kind: part
+  parent: m-buch1
+  number: "1"
+  title: "Ware und Geld"
+  page: "49"
+
+- id: m-ch1
+  kind: chapter
+  parent: m-p1
+  number: "1"
+  title: "Die Ware"
+  page: "49"
+
+- id: m-ch1-1
+  kind: section
+  parent: m-ch1
+  number: "1"
+  title: "Die zwei Faktoren der Ware: Gebrauchswert und Wert (Wertsubstanz, Wertgröße)"
+  page: "49"
+
+- id: m-ch1-2
+  kind: section
+  parent: m-ch1
+  number: "2"
+  title: "Doppelcharakter der in den Waren dargestellten Arbeit"
+  page: "56"
+
+- id: m-ch1-3
+  kind: section
+  parent: m-ch1
+  number: "3"
+  title: "Die Wertform oder der Tauschwert"
+  page: "62"
+
+- id: m-ch1-3-A
+  kind: subsection
+  parent: m-ch1-3
+  number: "A"
+  title: "Einfache, einzelne oder zufällige Wertform"
+  page: "63"
+
+- id: m-ch1-3-A-1
+  kind: subsection
+  parent: m-ch1-3-A
+  number: "1"
+  title: "Die beiden Pole des Wertausdrucks: Relative Wertform und Äquivalentform"
+  page: "63"
+
+- id: m-ch1-3-A-2
+  kind: subsection
+  parent: m-ch1-3-A
+  number: "2"
+  title: "Die relative Wertform"
+  page: "64"
+
+- id: m-ch1-3-A-2-a
+  kind: subsection
+  parent: m-ch1-3-A-2
+  number: "a"
+  title: "Gehalt der relativen Wertform"
+  page: "64"
+
+- id: m-ch1-3-A-2-b
+  kind: subsection
+  parent: m-ch1-3-A-2
+  number: "b"
+  title: "Quantitative Bestimmtheit der relativen Wertform"
+  page: "67"
+
+- id: m-ch1-3-A-3
+  kind: subsection
+  parent: m-ch1-3-A
+  number: "3"
+  title: "Die Äquivalentform"
+  page: "70"
+
+- id: m-ch1-3-A-4
+  kind: subsection
+  parent: m-ch1-3-A
+  number: "4"
+  title: "Das Ganze der einfachen Wertform"
+  page: "74"
+
+- id: m-ch1-3-B
+  kind: subsection
+  parent: m-ch1-3
+  number: "B"
+  title: "Totale oder entfaltete Wertform"
+  page: "77"
+
+- id: m-ch1-3-B-1
+  kind: subsection
+  parent: m-ch1-3-B
+  number: "1"
+  title: "Die entfaltete relative Wertform"
+  page: "77"
+
+- id: m-ch1-3-B-2
+  kind: subsection
+  parent: m-ch1-3-B
+  number: "2"
+  title: "Die besondre Äquivalentform"
+  page: "78"
+
+- id: m-ch1-3-B-3
+  kind: subsection
+  parent: m-ch1-3-B
+  number: "3"
+  title: "Mängel der totalen oder entfalteten Wertform"
+  page: "78"
+
+- id: m-ch1-3-C
+  kind: subsection
+  parent: m-ch1-3
+  number: "C"
+  title: "Allgemeine Wertform"
+  page: "79"
+
+- id: m-ch1-3-C-1
+  kind: subsection
+  parent: m-ch1-3-C
+  number: "1"
+  title: "Veränderter Charakter der Wertform"
+  page: "79"
+
+- id: m-ch1-3-C-2
+  kind: subsection
+  parent: m-ch1-3-C
+  number: "2"
+  title: "Entwicklungsverhältnis von relativer Wertform und Äquivalentform"
+  page: "81"
+
+- id: m-ch1-3-C-3
+  kind: subsection
+  parent: m-ch1-3-C
+  number: "3"
+  title: "Übergang aus der allgemeinen Wertform zur Geldform"
+  page: "83"
+
+- id: m-ch1-3-D
+  kind: subsection
+  parent: m-ch1-3
+  number: "D"
+  title: "Geldform"
+  page: "84"
+
+- id: m-ch1-4
+  kind: section
+  parent: m-ch1
+  number: "4"
+  title: "Der Fetischcharakter der Ware und sein Geheimnis"
+  page: "85"
+
+- id: m-ch2
+  kind: chapter
+  parent: m-p1
+  number: "2"
+  title: "Der Austauschprozeß"
+  page: "99"
+
+- id: m-ch3
+  kind: chapter
+  parent: m-p1
+  number: "3"
+  title: "Das Geld oder die Warenzirkulation"
+  page: "109"
+
+- id: m-ch3-1
+  kind: section
+  parent: m-ch3
+  number: "1"
+  title: "Maß der Werte"
+  page: "109"
+
+- id: m-ch3-2
+  kind: section
+  parent: m-ch3
+  number: "2"
+  title: "Zirkulationsmittel"
+  page: "118"
+
+- id: m-ch3-2-a
+  kind: subsection
+  parent: m-ch3-2
+  number: "a"
+  title: "Die Metamorphose der Waren"
+  page: "118"
+
+- id: m-ch3-2-b
+  kind: subsection
+  parent: m-ch3-2
+  number: "b"
+  title: "Der Umlauf des Geldes"
+  page: "128"
+
+- id: m-ch3-2-c
+  kind: subsection
+  parent: m-ch3-2
+  number: "c"
+  title: "Die Münze. Das Wertzeichen"
+  page: "138"
+
+- id: m-ch3-3
+  kind: section
+  parent: m-ch3
+  number: "3"
+  title: "Geld"
+  page: "143"
+
+- id: m-ch3-3-a
+  kind: subsection
+  parent: m-ch3-3
+  number: "a"
+  title: "Schatzbildung"
+  page: "144"
+
+- id: m-ch3-3-b
+  kind: subsection
+  parent: m-ch3-3
+  number: "b"
+  title: "Zahlungsmittel"
+  page: "148"
+
+- id: m-ch3-3-c
+  kind: subsection
+  parent: m-ch3-3
+  number: "c"
+  title: "Weltgeld"
+  page: "156"
+
+# ---- m-p2
+- id: m-p2
+  kind: part
+  parent: m-buch1
+  number: "2"
+  title: "Die Verwandlung von Geld in Kapital"
+  page: "161"
+
+- id: m-ch4
+  kind: chapter
+  parent: m-p2
+  number: "4"
+  title: "Verwandlung von Geld in Kapital"
+  page: "161"
+
+- id: m-ch4-1
+  kind: section
+  parent: m-ch4
+  number: "1"
+  title: "Die allgemeine Formel des Kapitals"
+  page: "161"
+
+- id: m-ch4-2
+  kind: section
+  parent: m-ch4
+  number: "2"
+  title: "Widersprüche der allgemeinen Formel"
+  page: "170"
+
+- id: m-ch4-3
+  kind: section
+  parent: m-ch4
+  number: "3"
+  title: "Kauf und Verkauf der Arbeitskraft"
+  page: "181"
+
+# ---- m-p3
+- id: m-p3
+  kind: part
+  parent: m-buch1
+  number: "3"
+  title: "Die Produktion des absoluten Mehrwerts"
+  page: "192"
+
+- id: m-ch5
+  kind: chapter
+  parent: m-p3
+  number: "5"
+  title: "Arbeitsprozeß und Verwertungsprozeß"
+  page: "192"
+
+- id: m-ch5-1
+  kind: section
+  parent: m-ch5
+  number: "1"
+  title: "Arbeitsprozeß"
+  page: "192"
+
+- id: m-ch5-2
+  kind: section
+  parent: m-ch5
+  number: "2"
+  title: "Verwertungsprozeß"
+  page: "200"
+
+- id: m-ch6
+  kind: chapter
+  parent: m-p3
+  number: "6"
+  title: "Konstantes Kapital und variables Kapital"
+  page: "214"
+
+- id: m-ch7
+  kind: chapter
+  parent: m-p3
+  number: "7"
+  title: "Die Rate des Mehrwerts"
+  page: "226"
+
+- id: m-ch7-1
+  kind: section
+  parent: m-ch7
+  number: "1"
+  title: "Der Exploitationsgrad der Arbeitskraft"
+  page: "226"
+
+- id: m-ch7-2
+  kind: section
+  parent: m-ch7
+  number: "2"
+  title: "Darstellung des Produktenwerts in proportionellen Teilen des Produkts"
+  page: "234"
+
+- id: m-ch7-3
+  kind: section
+  parent: m-ch7
+  number: "3"
+  title: "Seniors „Letzte Stunde“"
+  page: "237"
+
+- id: m-ch7-4
+  kind: section
+  parent: m-ch7
+  number: "4"
+  title: "Das Mehrprodukt"
+  page: "243"
+
+- id: m-ch8
+  kind: chapter
+  parent: m-p3
+  number: "8"
+  title: "Der Arbeitstag"
+  page: "245"
+
+- id: m-ch8-1
+  kind: section
+  parent: m-ch8
+  number: "1"
+  title: "Die Grenzen des Arbeitstags"
+  page: "245"
+
+- id: m-ch8-2
+  kind: section
+  parent: m-ch8
+  number: "2"
+  title: "Der Heißhunger nach Mehrarbeit. Fabrikant und Bojar"
+  page: "249"
+
+- id: m-ch8-3
+  kind: section
+  parent: m-ch8
+  number: "3"
+  title: "Englische Industriezweige ohne legale Schranke der Exploitation"
+  page: "258"
+
+- id: m-ch8-4
+  kind: section
+  parent: m-ch8
+  number: "4"
+  title: "Tag- und Nachtarbeit. Das Ablösungssystem"
+  page: "271"
+
+- id: m-ch8-5
+  kind: section
+  parent: m-ch8
+  number: "5"
+  title: "Der Kampf um den Normalarbeitstag. Zwangsgesetze zur Verlängerung des Arbeitstags von der Mitte des 14. bis zu Ende des 17. Jahrhunderts"
+  page: "279"
+
+- id: m-ch8-6
+  kind: section
+  parent: m-ch8
+  number: "6"
+  title: "Der Kampf um den Normalarbeitstag. Zwangsgesetzliche Beschränkung der Arbeitszeit. Die englische Fabrikgesetzgebung von 1833–1864"
+  page: "294"
+
+- id: m-ch8-7
+  kind: section
+  parent: m-ch8
+  number: "7"
+  title: "Der Kampf um den Normalarbeitstag. Rückwirkung der englischen Fabrikgesetzgebung auf andre Länder"
+  page: "315"
+
+- id: m-ch9
+  kind: chapter
+  parent: m-p3
+  number: "9"
+  title: "Rate und Masse des Mehrwerts"
+  page: "321"
+
+# ---- m-p4
+- id: m-p4
+  kind: part
+  parent: m-buch1
+  number: "4"
+  title: "Die Produktion des relativen Mehrwerts"
+  page: "331"
+
+- id: m-ch10
+  kind: chapter
+  parent: m-p4
+  number: "10"
+  title: "Begriff des relativen Mehrwerts"
+  page: "331"
+
+- id: m-ch11
+  kind: chapter
+  parent: m-p4
+  number: "11"
+  title: "Kooperation"
+  page: "341"
+
+- id: m-ch12
+  kind: chapter
+  parent: m-p4
+  number: "12"
+  title: "Teilung der Arbeit und Manufaktur"
+  page: "356"
+
+- id: m-ch12-1
+  kind: section
+  parent: m-ch12
+  number: "1"
+  title: "Doppelter Ursprung der Manufaktur"
+  page: "356"
+
+- id: m-ch12-2
+  kind: section
+  parent: m-ch12
+  number: "2"
+  title: "Der Teilarbeiter und sein Werkzeug"
+  page: "359"
+
+- id: m-ch12-3
+  kind: section
+  parent: m-ch12
+  number: "3"
+  title: "Die beiden Grundformen der Manufaktur – heterogene Manufaktur und organische Manufaktur"
+  page: "362"
+
+- id: m-ch12-4
+  kind: section
+  parent: m-ch12
+  number: "4"
+  title: "Teilung der Arbeit innerhalb der Manufaktur und Teilung der Arbeit innerhalb der Gesellschaft"
+  page: "371"
+
+- id: m-ch12-5
+  kind: section
+  parent: m-ch12
+  number: "5"
+  title: "Der kapitalistische Charakter der Manufaktur"
+  page: "380"
+
+- id: m-ch13
+  kind: chapter
+  parent: m-p4
+  number: "13"
+  title: "Maschinerie und große Industrie"
+  page: "391"
+
+- id: m-ch13-1
+  kind: section
+  parent: m-ch13
+  number: "1"
+  title: "Entwicklung der Maschinerie"
+  page: "391"
+
+- id: m-ch13-2
+  kind: section
+  parent: m-ch13
+  number: "2"
+  title: "Wertabgabe der Maschinerie an das Produkt"
+  page: "407"
+
+- id: m-ch13-3
+  kind: section
+  parent: m-ch13
+  number: "3"
+  title: "Nächste Wirkungen des maschinenmäßigen Betriebs auf den Arbeiter"
+  page: "416"
+
+- id: m-ch13-3-a
+  kind: subsection
+  parent: m-ch13-3
+  number: "a"
+  title: "Aneignung zuschüssiger Arbeitskräfte durch das Kapital. Weiber- und Kinderarbeit"
+  page: "416"
+
+- id: m-ch13-3-b
+  kind: subsection
+  parent: m-ch13-3
+  number: "b"
+  title: "Verlängrung des Arbeitstags"
+  page: "425"
+
+- id: m-ch13-3-c
+  kind: subsection
+  parent: m-ch13-3
+  number: "c"
+  title: "Intensifikation der Arbeit"
+  page: "431"
+
+- id: m-ch13-4
+  kind: section
+  parent: m-ch13
+  number: "4"
+  title: "Die Fabrik"
+  page: "441"
+
+- id: m-ch13-5
+  kind: section
+  parent: m-ch13
+  number: "5"
+  title: "Kampf zwischen Arbeiter und Maschine"
+  page: "451"
+
+- id: m-ch13-6
+  kind: section
+  parent: m-ch13
+  number: "6"
+  title: "Die Kompensationstheorie bezüglich der durch Maschinerie verdrängten Arbeiter"
+  page: "461"
+
+- id: m-ch13-7
+  kind: section
+  parent: m-ch13
+  number: "7"
+  title: "Repulsion und Attraktion von Arbeitern mit Entwicklung des Maschinenbetriebs. Krisen der Baumwollindustrie"
+  page: "470"
+
+- id: m-ch13-8
+  kind: section
+  parent: m-ch13
+  number: "8"
+  title: "Revolutionierung von Manufaktur, Handwerk und Hausarbeit durch die große Industrie"
+  page: "483"
+
+- id: m-ch13-8-a
+  kind: subsection
+  parent: m-ch13-8
+  number: "a"
+  title: "Aufhebung der auf Handwerk und Teilung der Arbeit beruhenden Kooperation"
+  page: "483"
+
+- id: m-ch13-8-b
+  kind: subsection
+  parent: m-ch13-8
+  number: "b"
+  title: "Rückwirkung des Fabrikwesens auf Manufaktur und Hausarbeit"
+  page: "485"
+
+- id: m-ch13-8-c
+  kind: subsection
+  parent: m-ch13-8
+  number: "c"
+  title: "Die moderne Manufaktur"
+  page: "486"
+
+- id: m-ch13-8-d
+  kind: subsection
+  parent: m-ch13-8
+  number: "d"
+  title: "Die moderne Hausarbeit"
+  page: "489"
+
+- id: m-ch13-8-e
+  kind: subsection
+  parent: m-ch13-8
+  number: "e"
+  title: "Übergang der modernen Manufaktur und Hausarbeit zur großen Industrie. Beschleunigung dieser Revolution durch Anwendung der Fabrikgesetze auf jene Betriebsweisen"
+  page: "494"
+
+- id: m-ch13-9
+  kind: section
+  parent: m-ch13
+  number: "9"
+  title: "Fabrikgesetzgebung. (Gesundheits- und Erziehungsklauseln.) Ihre Verallgemeinerung in England"
+  page: "504"
+
+- id: m-ch13-10
+  kind: section
+  parent: m-ch13
+  number: "10"
+  title: "Große Industrie und Agrikultur"
+  page: "527"
+
+# ---- m-p5
+- id: m-p5
+  kind: part
+  parent: m-buch1
+  number: "5"
+  title: "Die Produktion des absoluten und relativen Mehrwerts"
+  page: "531"
+
+- id: m-ch14
+  kind: chapter
+  parent: m-p5
+  number: "14"
+  title: "Absoluter und relativer Mehrwert"
+  page: "531"
+
+- id: m-ch15
+  kind: chapter
+  parent: m-p5
+  number: "15"
+  title: "Größenwechsel von Preis der Arbeitskraft und Mehrwert"
+  page: "542"
+
+- id: m-ch15-I
+  kind: section
+  parent: m-ch15
+  number: "I"
+  title: "Größe des Arbeitstags und Intensität der Arbeit konstant (gegeben), Produktivkraft der Arbeit variabel"
+  page: "543"
+
+- id: m-ch15-II
+  kind: section
+  parent: m-ch15
+  number: "II"
+  title: "Konstanter Arbeitstag, konstante Produktivkraft der Arbeit, Intensität der Arbeit variabel"
+  page: "547"
+
+- id: m-ch15-III
+  kind: section
+  parent: m-ch15
+  number: "III"
+  title: "Produktivkraft und Intensität der Arbeit konstant, Arbeitstag variabel"
+  page: "548"
+
+- id: m-ch15-IV
+  kind: section
+  parent: m-ch15
+  number: "IV"
+  title: "Gleichzeitige Variationen in Dauer, Produktivkraft und Intensität der Arbeit"
+  page: "550"
+
+- id: m-ch16
+  kind: chapter
+  parent: m-p5
+  number: "16"
+  title: "Verschiedne Formeln für die Rate des Mehrwerts"
+  page: "553"
+
+# ---- m-p6
+- id: m-p6
+  kind: part
+  parent: m-buch1
+  number: "6"
+  title: "Der Arbeitslohn"
+  page: "557"
+
+- id: m-ch17
+  kind: chapter
+  parent: m-p6
+  number: "17"
+  title: "Verwandlung von Wert resp. Preis der Arbeitskraft in Arbeitslohn"
+  page: "557"
+
+- id: m-ch18
+  kind: chapter
+  parent: m-p6
+  number: "18"
+  title: "Der Zeitlohn"
+  page: "565"
+
+- id: m-ch19
+  kind: chapter
+  parent: m-p6
+  number: "19"
+  title: "Der Stücklohn"
+  page: "574"
+
+- id: m-ch20
+  kind: chapter
+  parent: m-p6
+  number: "20"
+  title: "Nationale Verschiedenheit der Arbeitslöhne"
+  page: "583"
+
+# ---- m-p7
+- id: m-p7
+  kind: part
+  parent: m-buch1
+  number: "7"
+  title: "Der Akkumulationsprozeß des Kapitals"
+  page: "589"
+
+- id: m-p7-intro
+  kind: part-intro
+  parent: m-p7
+  page: "589"
+  note: "Untitled introduction to Part Seven; not listed in the table of contents."
+
+- id: m-ch21
+  kind: chapter
+  parent: m-p7
+  number: "21"
+  title: "Einfache Reproduktion"
+  page: "591"
+
+- id: m-ch22
+  kind: chapter
+  parent: m-p7
+  number: "22"
+  title: "Verwandlung von Mehrwert in Kapital"
+  page: "605"
+
+- id: m-ch22-1
+  kind: section
+  parent: m-ch22
+  number: "1"
+  title: "Kapitalistischer Produktionsprozeß auf erweiterter Stufenleiter. Umschlag der Eigentumsgesetze der Warenproduktion in Gesetze der kapitalistischen Aneignung"
+  page: "605"
+
+- id: m-ch22-2
+  kind: section
+  parent: m-ch22
+  number: "2"
+  title: "Irrige Auffassung der Reproduktion auf erweiterter Stufenleiter seitens der politischen Ökonomie"
+  page: "614"
+
+- id: m-ch22-3
+  kind: section
+  parent: m-ch22
+  number: "3"
+  title: "Teilung des Mehrwerts in Kapital und Revenue. Die Abstinenztheorie"
+  page: "617"
+
+- id: m-ch22-4
+  kind: section
+  parent: m-ch22
+  number: "4"
+  title: "Umstände, welche unabhängig von der proportionellen Teilung des Mehrwerts in Kapital und Revenue den Umfang der Akkumulation bestimmen: Exploitationsgrad der Arbeitskraft – Produktivkraft der Arbeit – Wachsende Differenz zwischen angewandtem und konsumiertem Kapital – Größe des vorgeschoßnen Kapitals"
+  page: "625"
+
+- id: m-ch22-5
+  kind: section
+  parent: m-ch22
+  number: "5"
+  title: "Der sogenannte Arbeitsfonds"
+  page: "636"
+
+- id: m-ch23
+  kind: chapter
+  parent: m-p7
+  number: "23"
+  title: "Das allgemeine Gesetz der kapitalistischen Akkumulation"
+  page: "640"
+
+- id: m-ch23-1
+  kind: section
+  parent: m-ch23
+  number: "1"
+  title: "Wachsende Nachfrage nach Arbeitskraft mit der Akkumulation, bei gleichbleibender Zusammensetzung des Kapitals"
+  page: "640"
+
+- id: m-ch23-2
+  kind: section
+  parent: m-ch23
+  number: "2"
+  title: "Relative Abnahme des variablen Kapitalteils im Fortgang der Akkumulation und der sie begleitenden Konzentration"
+  page: "650"
+
+- id: m-ch23-3
+  kind: section
+  parent: m-ch23
+  number: "3"
+  title: "Progressive Produktion einer relativen Übervölkerung oder industriellen Reservearmee"
+  page: "657"
+
+- id: m-ch23-4
+  kind: section
+  parent: m-ch23
+  number: "4"
+  title: "Verschiedne Existenzformen der relativen Übervölkerung. Das allgemeine Gesetz der kapitalistischen Akkumulation"
+  page: "670"
+
+- id: m-ch23-5
+  kind: section
+  parent: m-ch23
+  number: "5"
+  title: "Illustration des allgemeinen Gesetzes der kapitalistischen Akkumulation"
+  page: "677"
+
+- id: m-ch23-5-a
+  kind: subsection
+  parent: m-ch23-5
+  number: "a"
+  title: "England von 1846–1866"
+  page: "677"
+
+- id: m-ch23-5-b
+  kind: subsection
+  parent: m-ch23-5
+  number: "b"
+  title: "Die schlechtbezahlten Schichten der britischen industriellen Arbeiterklasse"
+  page: "684"
+
+- id: m-ch23-5-c
+  kind: subsection
+  parent: m-ch23-5
+  number: "c"
+  title: "Das Wandervolk"
+  page: "693"
+
+- id: m-ch23-5-d
+  kind: subsection
+  parent: m-ch23-5
+  number: "d"
+  title: "Wirkung der Krisen auf den bestbezahlten Teil der Arbeiterklasse"
+  page: "697"
+
+- id: m-ch23-5-e
+  kind: subsection
+  parent: m-ch23-5
+  number: "e"
+  title: "Das britische Ackerbauproletariat"
+  page: "701"
+
+- id: m-ch23-5-f
+  kind: subsection
+  parent: m-ch23-5
+  number: "f"
+  title: "Irland"
+  page: "726"
+
+- id: m-ch24
+  kind: chapter
+  parent: m-p7
+  number: "24"
+  title: "Die sogenannte ursprüngliche Akkumulation"
+  page: "741"
+
+- id: m-ch24-1
+  kind: section
+  parent: m-ch24
+  number: "1"
+  title: "Das Geheimnis der ursprünglichen Akkumulation"
+  page: "741"
+
+- id: m-ch24-2
+  kind: section
+  parent: m-ch24
+  number: "2"
+  title: "Expropriation des Landvolks von Grund und Boden"
+  page: "744"
+
+- id: m-ch24-3
+  kind: section
+  parent: m-ch24
+  number: "3"
+  title: "Blutgesetzgebung gegen die Expropriierten seit Ende des 15. Jahrhunderts. Gesetze zur Herabdrückung des Arbeitslohns"
+  page: "761"
+
+- id: m-ch24-4
+  kind: section
+  parent: m-ch24
+  number: "4"
+  title: "Genesis der kapitalistischen Pächter"
+  page: "770"
+
+- id: m-ch24-5
+  kind: section
+  parent: m-ch24
+  number: "5"
+  title: "Rückwirkung der agrikolen Revolution auf die Industrie. Herstellung des innern Markts für das industrielle Kapital"
+  page: "773"
+
+- id: m-ch24-6
+  kind: section
+  parent: m-ch24
+  number: "6"
+  title: "Genesis des industriellen Kapitalisten"
+  page: "777"
+
+- id: m-ch24-7
+  kind: section
+  parent: m-ch24
+  number: "7"
+  title: "Geschichtliche Tendenz der kapitalistischen Akkumulation"
+  page: "789"
+
+- id: m-ch25
+  kind: chapter
+  parent: m-p7
+  number: "25"
+  title: "Die moderne Kolonisationstheorie"
+  page: "792"

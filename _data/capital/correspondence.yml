@@ -1,0 +1,168 @@
+# Correspondence between reitter-outline.yml (r), fowkes-outline.yml (f) and
+# mew23-outline.yml (m).
+#
+# Each row is the smallest stretch of text that all three editions divide the
+# same way. A cell names the deepest node in that edition containing the
+# stretch. When one edition divides more finely, the coarser edition's id
+# repeats on consecutive rows (e.g. Reitter ch. 5 against Fowkes 7.1 and 7.2).
+# null = that edition does not contain the text.
+#
+# body:      the text of Volume 1. In every column the ids appear in reading
+#            order, and an id's repeats are consecutive.
+# apparatus: prefaces, afterwords and editorial material. Not ordered.
+#            Reitter prints Marx's 1872 afterword at the end of the book,
+#            Fowkes and MEW print it before Chapter 1.
+#
+# Optional row fields:
+#   partial: [r|f|m]  that edition contains only part of the text
+#
+# measure: the edition whose page numbers set block heights on the page when
+# Titles is off. end_page is the first page after the body text (MEW's
+# Anhang starts on S. 805; the last text page is 802).
+
+measure: { edition: m, end_page: "803" }
+
+apparatus:
+
+  # Marx's and Engels' prefaces and afterwords
+  - { r: r-preface-1867, f: f-preface-1, m: m-vorwort-1 }
+  - { r: r-afterword, f: f-postface-2, m: m-nachwort-2 }
+  - { r: null, f: f-preface-fr, m: m-vornachwort-fr-1 }
+  - { r: r-app3-advice, f: f-postface-fr, m: m-vornachwort-fr-2 }
+  - { r: r-app4-engels-excerpt, f: f-preface-3, m: m-vorwort-3, partial: [r] }
+  - { r: null, f: f-preface-en, m: m-vorwort-en }
+  - { r: null, f: f-preface-4, m: m-vorwort-4 }
+
+  # Material in one edition only
+  - { r: r-fm-foreword, f: null, m: null }
+  - { r: r-fm-intro, f: null, m: null }
+  - { r: r-fm-transpref, f: null, m: null }
+  - { r: r-fm-edition, f: null, m: null }
+  - { r: r-fm-quotenote, f: null, m: null }
+  - { r: r-bm-roberts, f: null, m: null }
+  - { r: r-app1, f: null, m: null }
+  - { r: r-app2, f: null, m: null }
+  - { r: null, f: f-fm-intro, m: null }
+  - { r: null, f: f-fm-transpref, m: null }
+  - { r: null, f: f-appendix-intro, m: null }
+  - { r: null, f: f-appendix-1, m: null }
+  - { r: null, f: f-appendix-2, m: null }
+  - { r: null, f: f-appendix-3, m: null }
+  - { r: null, f: f-appendix-4, m: null }
+
+body:
+
+  # Part One
+  - { r: r-ch1-1, f: f-ch1-1, m: m-ch1-1 }
+  - { r: r-ch1-2, f: f-ch1-2, m: m-ch1-2 }
+  - { r: r-ch1-3-A-1, f: f-ch1-3-a-1, m: m-ch1-3-A-1 }
+  - { r: r-ch1-3-A-2-a, f: f-ch1-3-a-2-i, m: m-ch1-3-A-2-a }
+  - { r: r-ch1-3-A-2-b, f: f-ch1-3-a-2-ii, m: m-ch1-3-A-2-b }
+  - { r: r-ch1-3-A-3, f: f-ch1-3-a-2-iii, m: m-ch1-3-A-3 }
+  - { r: r-ch1-3-A-4, f: f-ch1-3-a-2-iv, m: m-ch1-3-A-4 }
+  - { r: r-ch1-3-B-1, f: f-ch1-3-b-1, m: m-ch1-3-B-1 }
+  - { r: r-ch1-3-B-2, f: f-ch1-3-b-2, m: m-ch1-3-B-2 }
+  - { r: r-ch1-3-B-3, f: f-ch1-3-b-3, m: m-ch1-3-B-3 }
+  - { r: r-ch1-3-C-1, f: f-ch1-3-c-1, m: m-ch1-3-C-1 }
+  - { r: r-ch1-3-C-2, f: f-ch1-3-c-2, m: m-ch1-3-C-2 }
+  - { r: r-ch1-3-C-3, f: f-ch1-3-c-3, m: m-ch1-3-C-3 }
+  - { r: r-ch1-3-D, f: f-ch1-3-d, m: m-ch1-3-D }
+  - { r: r-ch1-4, f: f-ch1-4, m: m-ch1-4 }
+  - { r: r-ch2, f: f-ch2, m: m-ch2 }
+  - { r: r-ch3-1, f: f-ch3-1, m: m-ch3-1 }
+  - { r: r-ch3-2-a, f: f-ch3-2-a, m: m-ch3-2-a }
+  - { r: r-ch3-2-b, f: f-ch3-2-b, m: m-ch3-2-b }
+  - { r: r-ch3-2-c, f: f-ch3-2-c, m: m-ch3-2-c }
+  - { r: r-ch3-3-a, f: f-ch3-3-a, m: m-ch3-3-a }
+  - { r: r-ch3-3-b, f: f-ch3-3-b, m: m-ch3-3-b }
+  - { r: r-ch3-3-c, f: f-ch3-3-c, m: m-ch3-3-c }
+
+  # Part Two: one chapter in Reitter/MEW, three chapters in Fowkes
+  - { r: r-ch4-1, f: f-ch4, m: m-ch4-1 }
+  - { r: r-ch4-2, f: f-ch5, m: m-ch4-2 }
+  - { r: r-ch4-3, f: f-ch6, m: m-ch4-3 }
+
+  # Part Three: Fowkes chapter = Reitter/MEW chapter + 2
+  - { r: r-ch5, f: f-ch7-1, m: m-ch5-1 }
+  - { r: r-ch5, f: f-ch7-2, m: m-ch5-2 }
+  - { r: r-ch6, f: f-ch8, m: m-ch6 }
+  - { r: r-ch7-1, f: f-ch9-1, m: m-ch7-1 }
+  - { r: r-ch7-2, f: f-ch9-2, m: m-ch7-2 }
+  - { r: r-ch7-3, f: f-ch9-3, m: m-ch7-3 }
+  - { r: r-ch7-4, f: f-ch9-4, m: m-ch7-4 }
+  - { r: r-ch8-1, f: f-ch10-1, m: m-ch8-1 }
+  - { r: r-ch8-2, f: f-ch10-2, m: m-ch8-2 }
+  - { r: r-ch8-3, f: f-ch10-3, m: m-ch8-3 }
+  - { r: r-ch8-4, f: f-ch10-4, m: m-ch8-4 }
+  - { r: r-ch8-5, f: f-ch10-5, m: m-ch8-5 }
+  - { r: r-ch8-6, f: f-ch10-6, m: m-ch8-6 }
+  - { r: r-ch8-7, f: f-ch10-7, m: m-ch8-7 }
+  - { r: r-ch9, f: f-ch11, m: m-ch9 }
+
+  # Part Four
+  - { r: r-ch10, f: f-ch12, m: m-ch10 }
+  - { r: r-ch11, f: f-ch13, m: m-ch11 }
+  - { r: r-ch12-1, f: f-ch14-1, m: m-ch12-1 }
+  - { r: r-ch12-2, f: f-ch14-2, m: m-ch12-2 }
+  - { r: r-ch12-3, f: f-ch14-3, m: m-ch12-3 }
+  - { r: r-ch12-4, f: f-ch14-4, m: m-ch12-4 }
+  - { r: r-ch12-5, f: f-ch14-5, m: m-ch12-5 }
+  - { r: r-ch13-1, f: f-ch15-1, m: m-ch13-1 }
+  - { r: r-ch13-2, f: f-ch15-2, m: m-ch13-2 }
+  - { r: r-ch13-3-a, f: f-ch15-3-a, m: m-ch13-3-a }
+  - { r: r-ch13-3-b, f: f-ch15-3-b, m: m-ch13-3-b }
+  - { r: r-ch13-3-c, f: f-ch15-3-c, m: m-ch13-3-c }
+  - { r: r-ch13-4, f: f-ch15-4, m: m-ch13-4 }
+  - { r: r-ch13-5, f: f-ch15-5, m: m-ch13-5 }
+  - { r: r-ch13-6, f: f-ch15-6, m: m-ch13-6 }
+  - { r: r-ch13-7, f: f-ch15-7, m: m-ch13-7 }
+  - { r: r-ch13-8-a, f: f-ch15-8-a, m: m-ch13-8-a }
+  - { r: r-ch13-8-b, f: f-ch15-8-b, m: m-ch13-8-b }
+  - { r: r-ch13-8-c, f: f-ch15-8-c, m: m-ch13-8-c }
+  - { r: r-ch13-8-d, f: f-ch15-8-d, m: m-ch13-8-d }
+  - { r: r-ch13-8-e, f: f-ch15-8-e, m: m-ch13-8-e }
+  - { r: r-ch13-9, f: f-ch15-9, m: m-ch13-9 }
+  - { r: r-ch13-10, f: f-ch15-10, m: m-ch13-10 }
+
+  # Part Five
+  - { r: r-ch14, f: f-ch16, m: m-ch14 }
+  - { r: r-ch15-A, f: f-ch17-1, m: m-ch15-I }
+  - { r: r-ch15-B, f: f-ch17-2, m: m-ch15-II }
+  - { r: r-ch15-C, f: f-ch17-3, m: m-ch15-III }
+  - { r: r-ch15-D, f: f-ch17-4, m: m-ch15-IV }
+  - { r: r-ch16, f: f-ch18, m: m-ch16 }
+
+  # Part Six
+  - { r: r-ch17, f: f-ch19, m: m-ch17 }
+  - { r: r-ch18, f: f-ch20, m: m-ch18 }
+  - { r: r-ch19, f: f-ch21, m: m-ch19 }
+  - { r: r-ch20, f: f-ch22, m: m-ch20 }
+
+  # Part Seven
+  - { r: r-p7-intro, f: f-p7-intro, m: m-p7-intro }
+  - { r: r-ch21, f: f-ch23, m: m-ch21 }
+  - { r: r-ch22-1, f: f-ch24-1, m: m-ch22-1 }
+  - { r: r-ch22-2, f: f-ch24-2, m: m-ch22-2 }
+  - { r: r-ch22-3, f: f-ch24-3, m: m-ch22-3 }
+  - { r: r-ch22-4, f: f-ch24-4, m: m-ch22-4 }
+  - { r: r-ch22-5, f: f-ch24-5, m: m-ch22-5 }
+  - { r: r-ch23-1, f: f-ch25-1, m: m-ch23-1 }
+  - { r: r-ch23-2, f: f-ch25-2, m: m-ch23-2 }
+  - { r: r-ch23-3, f: f-ch25-3, m: m-ch23-3 }
+  - { r: r-ch23-4, f: f-ch25-4, m: m-ch23-4 }
+  - { r: r-ch23-5-a, f: f-ch25-5-a, m: m-ch23-5-a }
+  - { r: r-ch23-5-b, f: f-ch25-5-b, m: m-ch23-5-b }
+  - { r: r-ch23-5-c, f: f-ch25-5-c, m: m-ch23-5-c }
+  - { r: r-ch23-5-d, f: f-ch25-5-d, m: m-ch23-5-d }
+  - { r: r-ch23-5-e, f: f-ch25-5-e, m: m-ch23-5-e }
+  - { r: r-ch23-5-f, f: f-ch25-5-f, m: m-ch23-5-f }
+
+  # Original/primitive accumulation: one chapter in Reitter/MEW, Fowkes' Part Eight
+  - { r: r-ch24-1, f: f-ch26, m: m-ch24-1 }
+  - { r: r-ch24-2, f: f-ch27, m: m-ch24-2 }
+  - { r: r-ch24-3, f: f-ch28, m: m-ch24-3 }
+  - { r: r-ch24-4, f: f-ch29, m: m-ch24-4 }
+  - { r: r-ch24-5, f: f-ch30, m: m-ch24-5 }
+  - { r: r-ch24-6, f: f-ch31, m: m-ch24-6 }
+  - { r: r-ch24-7, f: f-ch32, m: m-ch24-7 }
+  - { r: r-ch25, f: f-ch33, m: m-ch25 }

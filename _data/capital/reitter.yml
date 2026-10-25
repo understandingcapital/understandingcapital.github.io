@@ -1,0 +1,1009 @@
+# Reitter translation, ed. Paul North and Paul Reitter: Capital: Critique of Political Economy, Volume 1.
+# Princeton University Press, 2024. Translates the second German edition (1872).
+#
+# Transcribed from the printed table of contents and checked against the body
+# headings. Fields: id, kind, parent, number (label as printed, without
+# punctuation), title, page (where the heading is printed), author, note.
+# kind: front | book | part | part-intro | chapter | section | subsection | back
+# Untitled nodes (part intros, MEW's untitled French preface letter) omit title.
+
+- id: r-fm-foreword
+  kind: front
+  parent: null
+  title: "Foreword"
+  page: "xv"
+  author: "Wendy Brown"
+
+- id: r-fm-intro
+  kind: front
+  parent: null
+  title: "Editor's Introduction"
+  page: "xxxi"
+  author: "Paul North"
+
+- id: r-fm-transpref
+  kind: front
+  parent: null
+  title: "Translator's Preface"
+  page: "lxvii"
+  author: "Paul Reitter"
+
+- id: r-fm-edition
+  kind: front
+  parent: null
+  title: "On the Choice of Edition"
+  page: "lxxxi"
+  author: "editors"
+
+- id: r-fm-quotenote
+  kind: front
+  parent: null
+  title: "Quotations, Numerals, and Symbols in Marx's Text"
+  page: "lxxxv"
+  author: "editors"
+
+- id: r-preface-1867
+  kind: front
+  parent: null
+  title: "Preface to the 1867 Edition"
+  page: "5"
+  author: "Marx"
+
+- id: r-vol1
+  kind: book
+  parent: null
+  number: "One"
+  title: "Capital's Process of Production"
+  page: "9"
+
+# ---- r-p1
+- id: r-p1
+  kind: part
+  parent: r-vol1
+  number: "1"
+  title: "The Commodity and Money"
+  page: "11"
+
+- id: r-ch1
+  kind: chapter
+  parent: r-p1
+  number: "1"
+  title: "The Commodity"
+  page: "13"
+
+- id: r-ch1-1
+  kind: section
+  parent: r-ch1
+  number: "1"
+  title: "The Two Factors of the Commodity: Use-Value and Value (Value-Substance, Magnitude of Value)"
+  page: "13"
+
+- id: r-ch1-2
+  kind: section
+  parent: r-ch1
+  number: "2"
+  title: "The Double Character of the Labor Represented in Commodities"
+  page: "19"
+
+- id: r-ch1-3
+  kind: section
+  parent: r-ch1
+  number: "3"
+  title: "The Value-Form or Exchange-Value"
+  page: "24"
+
+- id: r-ch1-3-A
+  kind: subsection
+  parent: r-ch1-3
+  number: "A"
+  title: "Simple or Individual Value-Form"
+  page: "25"
+
+- id: r-ch1-3-A-1
+  kind: subsection
+  parent: r-ch1-3-A
+  number: "1"
+  title: "The Two Poles of a Value Expression: Relative Value-Form and Equivalent Form"
+  page: "25"
+
+- id: r-ch1-3-A-2
+  kind: subsection
+  parent: r-ch1-3-A
+  number: "2"
+  title: "Relative Value-Form"
+  page: "26"
+
+- id: r-ch1-3-A-2-a
+  kind: subsection
+  parent: r-ch1-3-A-2
+  number: "a"
+  title: "The Content of the Relative Value-Form"
+  page: "26"
+
+- id: r-ch1-3-A-2-b
+  kind: subsection
+  parent: r-ch1-3-A-2
+  number: "b"
+  title: "The Quantitative Determination of the Relative Value-Form"
+  page: "30"
+
+- id: r-ch1-3-A-3
+  kind: subsection
+  parent: r-ch1-3-A
+  number: "3"
+  title: "The Equivalent Form"
+  page: "32"
+
+- id: r-ch1-3-A-4
+  kind: subsection
+  parent: r-ch1-3-A
+  number: "4"
+  title: "Simple Value-Form in Its Entirety"
+  page: "37"
+
+- id: r-ch1-3-B
+  kind: subsection
+  parent: r-ch1-3
+  number: "B"
+  title: "Total or Expanded Value-Form"
+  page: "39"
+
+- id: r-ch1-3-B-1
+  kind: subsection
+  parent: r-ch1-3-B
+  number: "1"
+  title: "The Expanded Relative Value-Form"
+  page: "39"
+
+- id: r-ch1-3-B-2
+  kind: subsection
+  parent: r-ch1-3-B
+  number: "2"
+  title: "The Particular Equivalent Form"
+  page: "40"
+
+- id: r-ch1-3-B-3
+  kind: subsection
+  parent: r-ch1-3-B
+  number: "3"
+  title: "The Shortcomings of the Total or Expanded Value-Form"
+  page: "40"
+
+- id: r-ch1-3-C
+  kind: subsection
+  parent: r-ch1-3
+  number: "C"
+  title: "The General Value-Form"
+  page: "41"
+
+- id: r-ch1-3-C-1
+  kind: subsection
+  parent: r-ch1-3-C
+  number: "1"
+  title: "The Changed Character of the Value-Form"
+  page: "42"
+
+- id: r-ch1-3-C-2
+  kind: subsection
+  parent: r-ch1-3-C
+  number: "2"
+  title: "The Interdependent Development of the Relative Value-Form and the Equivalent Form"
+  page: "44"
+
+- id: r-ch1-3-C-3
+  kind: subsection
+  parent: r-ch1-3-C
+  number: "3"
+  title: "The Transition from the General Value-Form to the Money-Form"
+  page: "46"
+
+- id: r-ch1-3-D
+  kind: subsection
+  parent: r-ch1-3
+  number: "D"
+  title: "The Money-Form"
+  page: "46"
+
+- id: r-ch1-4
+  kind: section
+  parent: r-ch1
+  number: "4"
+  title: "The Fetish Character of Commodities—and the Secret It Entails"
+  page: "47"
+  note: "Printing slip: the heading (p. 47) and its contents entry (p. viii) are styled and indented like an item under 3.D. Numbered and treated here as section 4 of chapter 1, as in MEW and Fowkes."
+
+- id: r-ch2
+  kind: chapter
+  parent: r-p1
+  number: "2"
+  title: "The Exchange Process"
+  page: "60"
+
+- id: r-ch3
+  kind: chapter
+  parent: r-p1
+  number: "3"
+  title: "Money, or Commodity Circulation"
+  page: "69"
+
+- id: r-ch3-1
+  kind: section
+  parent: r-ch3
+  number: "1"
+  title: "The Measure of Value"
+  page: "69"
+
+- id: r-ch3-2
+  kind: section
+  parent: r-ch3
+  number: "2"
+  title: "The Means of Circulation"
+  page: "78"
+
+- id: r-ch3-2-a
+  kind: subsection
+  parent: r-ch3-2
+  number: "a"
+  title: "The Metamorphosis of Commodities"
+  page: "78"
+
+- id: r-ch3-2-b
+  kind: subsection
+  parent: r-ch3-2
+  number: "b"
+  title: "The Circulation of Money"
+  page: "88"
+
+- id: r-ch3-2-c
+  kind: subsection
+  parent: r-ch3-2
+  number: "c"
+  title: "Coin: The Symbols of Value"
+  page: "98"
+
+- id: r-ch3-3
+  kind: section
+  parent: r-ch3
+  number: "3"
+  title: "Money"
+  page: "103"
+
+- id: r-ch3-3-a
+  kind: subsection
+  parent: r-ch3-3
+  number: "a"
+  title: "Amassing Money"
+  page: "103"
+
+- id: r-ch3-3-b
+  kind: subsection
+  parent: r-ch3-3
+  number: "b"
+  title: "Means of Payment"
+  page: "108"
+
+- id: r-ch3-3-c
+  kind: subsection
+  parent: r-ch3-3
+  number: "c"
+  title: "Worldwide Money"
+  page: "115"
+
+# ---- r-p2
+- id: r-p2
+  kind: part
+  parent: r-vol1
+  number: "2"
+  title: "The Transformation of Money into Capital"
+  page: "119"
+
+- id: r-ch4
+  kind: chapter
+  parent: r-p2
+  number: "4"
+  title: "The Transformation of Money into Capital"
+  page: "121"
+
+- id: r-ch4-1
+  kind: section
+  parent: r-ch4
+  number: "1"
+  title: "The General Formula for Capital"
+  page: "121"
+
+- id: r-ch4-2
+  kind: section
+  parent: r-ch4
+  number: "2"
+  title: "Contradictions in the General Formula"
+  page: "130"
+
+- id: r-ch4-3
+  kind: section
+  parent: r-ch4
+  number: "3"
+  title: "Buying and Selling Labor-Power"
+  page: "140"
+
+# ---- r-p3
+- id: r-p3
+  kind: part
+  parent: r-vol1
+  number: "3"
+  title: "The Production of Absolute Surplus-Value"
+  page: "151"
+
+- id: r-ch5
+  kind: chapter
+  parent: r-p3
+  number: "5"
+  title: "The Labor Process and the Valorization Process"
+  page: "153"
+
+- id: r-ch6
+  kind: chapter
+  parent: r-p3
+  number: "6"
+  title: "Constant Capital and Variable Capital"
+  page: "174"
+
+- id: r-ch7
+  kind: chapter
+  parent: r-p3
+  number: "7"
+  title: "The Rate of Surplus-Value"
+  page: "185"
+
+- id: r-ch7-1
+  kind: section
+  parent: r-ch7
+  number: "1"
+  title: "The Degree to which Labor-Power Is Exploited"
+  page: "185"
+
+- id: r-ch7-2
+  kind: section
+  parent: r-ch7
+  number: "2"
+  title: "The Product's Value Represented as Proportional Parts of the Product"
+  page: "193"
+
+- id: r-ch7-3
+  kind: section
+  parent: r-ch7
+  number: "3"
+  title: "Senior's “Last Hour”"
+  page: "196"
+
+- id: r-ch7-4
+  kind: section
+  parent: r-ch7
+  number: "4"
+  title: "Surplus Product"
+  page: "201"
+
+- id: r-ch8
+  kind: chapter
+  parent: r-p3
+  number: "8"
+  title: "The Working Day"
+  page: "203"
+
+- id: r-ch8-1
+  kind: section
+  parent: r-ch8
+  number: "1"
+  title: "Limits of the Working Day"
+  page: "203"
+
+- id: r-ch8-2
+  kind: section
+  parent: r-ch8
+  number: "2"
+  title: "The Bottomless Appetite for Surplus-Labor. Manufacturer and Boyar"
+  page: "207"
+
+- id: r-ch8-3
+  kind: section
+  parent: r-ch8
+  number: "3"
+  title: "Branches of English Industry Where the Law Doesn't Limit Exploitation"
+  page: "215"
+
+- id: r-ch8-4
+  kind: section
+  parent: r-ch8
+  number: "4"
+  title: "Day Work and Night Work. The Shift System"
+  page: "227"
+
+- id: r-ch8-5
+  kind: section
+  parent: r-ch8
+  number: "5"
+  title: "The Struggle for a Normal Working Day. Laws for the Compulsory Extension of the Working Day from the Middle of the Fourteenth Century to the End of the Seventeenth Century"
+  page: "235"
+
+- id: r-ch8-6
+  kind: section
+  parent: r-ch8
+  number: "6"
+  title: "The Struggle for a Normal Working Day. Laws that Limit Labor-Time. English Factory Legislation from 1833 to 1864"
+  page: "247"
+
+- id: r-ch8-7
+  kind: section
+  parent: r-ch8
+  number: "7"
+  title: "The Struggle for a Normal Working Day. The Impact of English Factory Legislation on Other Countries"
+  page: "267"
+
+- id: r-ch9
+  kind: chapter
+  parent: r-p3
+  number: "9"
+  title: "The Rate and Amount of Surplus-Value"
+  page: "273"
+
+# ---- r-p4
+- id: r-p4
+  kind: part
+  parent: r-vol1
+  number: "4"
+  title: "The Production of Relative Surplus-Value"
+  page: "283"
+
+- id: r-ch10
+  kind: chapter
+  parent: r-p4
+  number: "10"
+  title: "The Concept of Relative Surplus-Value"
+  page: "285"
+
+- id: r-ch11
+  kind: chapter
+  parent: r-p4
+  number: "11"
+  title: "Cooperation"
+  page: "294"
+
+- id: r-ch12
+  kind: chapter
+  parent: r-p4
+  number: "12"
+  title: "The Division of Labor and the Manufacturing System"
+  page: "308"
+
+- id: r-ch12-1
+  kind: section
+  parent: r-ch12
+  number: "1"
+  title: "The Double Origin of the Manufacturing System"
+  page: "308"
+
+- id: r-ch12-2
+  kind: section
+  parent: r-ch12
+  number: "2"
+  title: "The Specialized Worker and His Tools"
+  page: "311"
+
+- id: r-ch12-3
+  kind: section
+  parent: r-ch12
+  number: "3"
+  title: "The Two Basic Forms of the Manufacturing System—Heterogenous and Organic"
+  page: "314"
+
+- id: r-ch12-4
+  kind: section
+  parent: r-ch12
+  number: "4"
+  title: "The Division of Labor in the Manufacturing System and the Division of Labor in Society"
+  page: "322"
+
+- id: r-ch12-5
+  kind: section
+  parent: r-ch12
+  number: "5"
+  title: "The Capitalist Character of the Manufacturing System"
+  page: "330"
+
+- id: r-ch13
+  kind: chapter
+  parent: r-p4
+  number: "13"
+  title: "Machinery and Large-Scale Industry"
+  page: "341"
+
+- id: r-ch13-1
+  kind: section
+  parent: r-ch13
+  number: "1"
+  title: "How Machinery Developed"
+  page: "341"
+
+- id: r-ch13-2
+  kind: section
+  parent: r-ch13
+  number: "2"
+  title: "How Machinery Transfers Value to the Product"
+  page: "356"
+
+- id: r-ch13-3
+  kind: section
+  parent: r-ch13
+  number: "3"
+  title: "The Immediate Effects of Machine-Driven Production on Workers"
+  page: "363"
+
+- id: r-ch13-3-a
+  kind: subsection
+  parent: r-ch13-3
+  number: "a"
+  title: "Capital's Appropriation of the Labor-Power of Supplementary Workers: Women and Children"
+  page: "363"
+
+- id: r-ch13-3-b
+  kind: subsection
+  parent: r-ch13-3
+  number: "b"
+  title: "The Extension of the Workday"
+  page: "371"
+
+- id: r-ch13-3-c
+  kind: subsection
+  parent: r-ch13-3
+  number: "c"
+  title: "The Intensification of Labor"
+  page: "377"
+
+- id: r-ch13-4
+  kind: section
+  parent: r-ch13
+  number: "4"
+  title: "The Factory"
+  page: "386"
+
+- id: r-ch13-5
+  kind: section
+  parent: r-ch13
+  number: "5"
+  title: "The Struggle between Workers and Machines"
+  page: "394"
+
+- id: r-ch13-6
+  kind: section
+  parent: r-ch13
+  number: "6"
+  title: "The Compensation Theory as It Applies to Workers Displaced by Machines"
+  page: "403"
+
+- id: r-ch13-7
+  kind: section
+  parent: r-ch13
+  number: "7"
+  title: "How Machine-Driven Industry Attracts and Repels Workers as It Develops. Crises in the Cotton Industry"
+  page: "410"
+
+- id: r-ch13-8
+  kind: section
+  parent: r-ch13
+  number: "8"
+  title: "How the Manufacturing System, Craft Labor, and Domestic Industry Are Revolutionized by Large-Scale Industry"
+  page: "421"
+
+- id: r-ch13-8-a
+  kind: subsection
+  parent: r-ch13-8
+  number: "a"
+  title: "Superseding Cooperation Based on Craft Labor and the Division of Labor"
+  page: "421"
+
+- id: r-ch13-8-b
+  kind: subsection
+  parent: r-ch13-8
+  number: "b"
+  title: "The Rebound Effect of the Factory System on the Manufacturing System and Domestic Industry"
+  page: "423"
+
+- id: r-ch13-8-c
+  kind: subsection
+  parent: r-ch13-8
+  number: "c"
+  title: "The Modern Manufacturing System"
+  page: "424"
+
+- id: r-ch13-8-d
+  kind: subsection
+  parent: r-ch13-8
+  number: "d"
+  title: "Modern Domestic Industry"
+  page: "427"
+
+- id: r-ch13-8-e
+  kind: subsection
+  parent: r-ch13-8
+  number: "e"
+  title: "The Transition from the Modern Manufacturing System and Domestic Industry to Large-Scale Industry. How This Revolution Has Been Accelerated by the Application of the Factory Acts to These Modes of Industry"
+  page: "432"
+
+- id: r-ch13-9
+  kind: section
+  parent: r-ch13
+  number: "9"
+  title: "Factory Legislation (Hygiene and Education Clauses). The Extension of Its Jurisdiction in England"
+  page: "442"
+
+- id: r-ch13-10
+  kind: section
+  parent: r-ch13
+  number: "10"
+  title: "Large-Scale Industry and Agriculture"
+  page: "459"
+
+# ---- r-p5
+- id: r-p5
+  kind: part
+  parent: r-vol1
+  number: "5"
+  title: "The Production of Absolute and Relative Surplus-Value"
+  page: "463"
+
+- id: r-ch14
+  kind: chapter
+  parent: r-p5
+  number: "14"
+  title: "Absolute and Relative Surplus-Value"
+  page: "465"
+
+- id: r-ch15
+  kind: chapter
+  parent: r-p5
+  number: "15"
+  title: "The Price of Labor-Power and the Magnitude of Surplus-Value Increase and Decrease"
+  page: "473"
+
+- id: r-ch15-A
+  kind: section
+  parent: r-ch15
+  number: "A"
+  title: "The Magnitude of the Workday and the Intensity of Labor Remain Constant (fixed); Labor's Productive Power Varies"
+  page: "474"
+
+- id: r-ch15-B
+  kind: section
+  parent: r-ch15
+  number: "B"
+  title: "The Magnitude of the Workday and Labor's Productive Power Are Constant, Labor's Intensity Varies"
+  page: "478"
+
+- id: r-ch15-C
+  kind: section
+  parent: r-ch15
+  number: "C"
+  title: "Labor's Productive Power and Intensity Remain Constant, the Length of the Workday Varies"
+  page: "479"
+
+- id: r-ch15-D
+  kind: section
+  parent: r-ch15
+  number: "D"
+  title: "Labor's Duration, Productive Power, and Intensity All Vary"
+  page: "480"
+
+- id: r-ch16
+  kind: chapter
+  parent: r-p5
+  number: "16"
+  title: "Different Formulas for the Rate of Surplus-Value"
+  page: "484"
+
+# ---- r-p6
+- id: r-p6
+  kind: part
+  parent: r-vol1
+  number: "6"
+  title: "Wages"
+  page: "489"
+
+- id: r-ch17
+  kind: chapter
+  parent: r-p6
+  number: "17"
+  title: "How the Value and Price of Labor-Power Are Transformed into Wages"
+  page: "491"
+
+- id: r-ch18
+  kind: chapter
+  parent: r-p6
+  number: "18"
+  title: "Time Wages"
+  page: "499"
+
+- id: r-ch19
+  kind: chapter
+  parent: r-p6
+  number: "19"
+  title: "Piece Wages"
+  page: "507"
+
+- id: r-ch20
+  kind: chapter
+  parent: r-p6
+  number: "20"
+  title: "Variations in Wages from Nation to Nation"
+  page: "515"
+
+# ---- r-p7
+- id: r-p7
+  kind: part
+  parent: r-vol1
+  number: "7"
+  title: "Capital's Process of Accumulation"
+  page: "519"
+
+- id: r-p7-intro
+  kind: part-intro
+  parent: r-p7
+  page: "519"
+  note: "Untitled introduction to Part Seven; not listed in the table of contents."
+
+- id: r-ch21
+  kind: chapter
+  parent: r-p7
+  number: "21"
+  title: "Simple Reproduction"
+  page: "521"
+
+- id: r-ch22
+  kind: chapter
+  parent: r-p7
+  number: "22"
+  title: "How Surplus-Value Is Transformed into Capital"
+  page: "533"
+
+- id: r-ch22-1
+  kind: section
+  parent: r-ch22
+  number: "1"
+  title: "The Capitalist Production Process on an Ever-Larger Scale. The Conversion of the Proprietary Laws of Commodity Production into the Laws of Capitalist Appropriation"
+  page: "533"
+
+- id: r-ch22-2
+  kind: section
+  parent: r-ch22
+  number: "2"
+  title: "Political Economy's Misunderstanding of Reproduction on an Ever-Larger Scale"
+  page: "538"
+
+- id: r-ch22-3
+  kind: section
+  parent: r-ch22
+  number: "3"
+  title: "The Division of Surplus-Value into Capital and Revenue. The Abstinence Theory"
+  page: "541"
+
+- id: r-ch22-4
+  kind: section
+  parent: r-ch22
+  number: "4"
+  title: "The Circumstances that Determine the Extent of Accumulation Independently of the Division of Surplus-Value into Capital and Revenue: The Degree to which Labor-Power Is Exploited; Labor's Productive Power; the Magnitude of the Capital Advanced; the Increasing Difference between the Magnitude of the Capital Employed and the Capital Consumed"
+  page: "549"
+
+- id: r-ch22-5
+  kind: section
+  parent: r-ch22
+  number: "5"
+  title: "The So-Called Labor Fund"
+  page: "558"
+
+- id: r-ch23
+  kind: chapter
+  parent: r-p7
+  number: "23"
+  title: "The General Law of Capitalist Accumulation"
+  page: "562"
+
+- id: r-ch23-1
+  kind: section
+  parent: r-ch23
+  number: "1"
+  title: "The Demand for Labor-Power Increases When Accumulation Occurs, if the Composition of Capital Stays the Same"
+  page: "562"
+
+- id: r-ch23-2
+  kind: section
+  parent: r-ch23
+  number: "2"
+  title: "Variable Capital Decreases in Relative Terms during the Course of Accumulation and the Concentration that Accompanies It"
+  page: "570"
+
+- id: r-ch23-3
+  kind: section
+  parent: r-ch23
+  number: "3"
+  title: "The Progressive Production of a Relative Surplus Population or an Industrial Reserve Army"
+  page: "575"
+
+- id: r-ch23-4
+  kind: section
+  parent: r-ch23
+  number: "4"
+  title: "The Relative Surplus Population in Its Various Forms of Existence. The General Law of Capitalist Accumulation"
+  page: "586"
+
+- id: r-ch23-5
+  kind: section
+  parent: r-ch23
+  number: "5"
+  title: "Illustrations of the General Law of Capitalist Accumulation"
+  page: "593"
+
+- id: r-ch23-5-a
+  kind: subsection
+  parent: r-ch23-5
+  number: "a"
+  title: "England from 1846 to 1866"
+  page: "593"
+
+- id: r-ch23-5-b
+  kind: subsection
+  parent: r-ch23-5
+  number: "b"
+  title: "The Poorly Paid Strata of Britain's Industrial Working Class"
+  page: "599"
+
+- id: r-ch23-5-c
+  kind: subsection
+  parent: r-ch23-5
+  number: "c"
+  title: "The Nomadic Population"
+  page: "608"
+
+- id: r-ch23-5-d
+  kind: subsection
+  parent: r-ch23-5
+  number: "d"
+  title: "How Crises Affect the Highest-Paid Members of the Working Class"
+  page: "612"
+
+- id: r-ch23-5-e
+  kind: subsection
+  parent: r-ch23-5
+  number: "e"
+  title: "Britain's Agricultural Proletariat"
+  page: "615"
+
+- id: r-ch23-5-f
+  kind: subsection
+  parent: r-ch23-5
+  number: "f"
+  title: "Ireland"
+  page: "639"
+
+- id: r-ch24
+  kind: chapter
+  parent: r-p7
+  number: "24"
+  title: "The So-Called Original Accumulation"
+  page: "650"
+
+- id: r-ch24-1
+  kind: section
+  parent: r-ch24
+  number: "1"
+  title: "The Secret of Original Accumulation"
+  page: "650"
+
+- id: r-ch24-2
+  kind: section
+  parent: r-ch24
+  number: "2"
+  title: "The Expropriation of the Rural Population's Land"
+  page: "652"
+
+- id: r-ch24-3
+  kind: section
+  parent: r-ch24
+  number: "3"
+  title: "Bloody Legislation against the Expropriated since the End of the Fifteenth Century. Legislation Enacted to Lower Wages"
+  page: "667"
+
+- id: r-ch24-4
+  kind: section
+  parent: r-ch24
+  number: "4"
+  title: "The Genesis of Capitalist Farmers"
+  page: "675"
+
+- id: r-ch24-5
+  kind: section
+  parent: r-ch24
+  number: "5"
+  title: "How the Agricultural Revolution Reacted on Industry. The Creation of a Domestic Market for Industrial Capital"
+  page: "677"
+
+- id: r-ch24-6
+  kind: section
+  parent: r-ch24
+  number: "6"
+  title: "The Genesis of Industrial Capitalists"
+  page: "681"
+
+- id: r-ch24-7
+  kind: section
+  parent: r-ch24
+  number: "7"
+  title: "The Historical Tendency of Capitalist Accumulation"
+  page: "689"
+
+- id: r-ch25
+  kind: chapter
+  parent: r-p7
+  number: "25"
+  title: "The Modern Theory of Colonization"
+  page: "693"
+
+- id: r-afterword
+  kind: back
+  parent: null
+  title: "Afterword"
+  page: "702"
+  author: "Marx"
+  note: "Marx's afterword to the second (1872) edition. The second edition printed it at the end of the volume; Fowkes and MEW print it as front matter."
+
+- id: r-bm-roberts
+  kind: back
+  parent: null
+  title: "The French Reconstruction of Capital, 1872–75"
+  page: "715"
+  author: "William Clare Roberts"
+
+- id: r-app1
+  kind: back
+  parent: null
+  number: "1"
+  title: "Comparative Tables of Contents"
+  page: "731"
+  author: "editors"
+
+- id: r-app2
+  kind: back
+  parent: null
+  number: "2"
+  title: "The First German Edition, Published 1867"
+  page: "735"
+  author: "editors"
+
+- id: r-app3
+  kind: back
+  parent: null
+  number: "3"
+  title: "The French Translation, Published 1875"
+  page: "739"
+  author: "editors"
+
+- id: r-app3-advice
+  kind: back
+  parent: r-app3
+  title: "Advice to the reader"
+  page: "745"
+  author: "Marx"
+  note: "Full text of Marx's 1875 note to French readers, quoted inside the appendix."
+
+- id: r-app4
+  kind: back
+  parent: null
+  number: "4"
+  title: "Changes toward a Third German Edition"
+  page: "747"
+  author: "editors"
+
+- id: r-app4-engels-excerpt
+  kind: back
+  parent: r-app4
+  title: "Excerpt from Engels' preface to the third edition"
+  page: "747"
+  author: "Engels"
+  note: "Quoted excerpt only, not the full preface."
