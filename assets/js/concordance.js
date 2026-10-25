@@ -551,7 +551,6 @@
     }
 
     return '<div class="cc-grid cc-maphead">' + this.headRow() + '</div>' +
-      '<p class="cc-hint">Block height = length of the text (very short passages are drawn larger so they stay readable). Select a block to see the matching passages.</p>' +
       '<div class="cc-map" style="height:' + lay.height + 'px">' + rulesHtml +
         '<div class="cc-mapcols">' + colsHtml + '</div></div>';
   };
