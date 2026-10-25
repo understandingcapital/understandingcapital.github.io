@@ -5,8 +5,11 @@ order: 1
 title: Start From Beginning
 ---
 
-{% assign visible_posts = site.posts | where_exp: 'item', 'item.hidden != true' %}
+{% assign episodes = site.posts
+  | where_exp: 'item', 'item.hidden != true'
+  | where_exp: 'item', 'item.seq'
+  | sort: 'seq' %}
 
-{% for post in visible_posts reversed %}
-- [{{ post.title }}]({{ post.url }}) — {{ post.date | date: "%b %-d, %Y" }}
+{% for post in episodes %}
+- [{{ post.title }}]({{ post.url | relative_url }}) — {{ post.date | date: "%b %-d, %Y" }}
 {% endfor %}
