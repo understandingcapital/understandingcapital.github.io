@@ -1,9 +1,9 @@
 ---
 
 # the default layout is 'page'
-
+title: About
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 An Occasionally Illustrated Read-Along Podcast for Capital Volume 1, run by [Hagen Blix](https://hagenblix.github.io/). The podcast got started in August 2026, and trails an in-person reading group I'm facilitating.

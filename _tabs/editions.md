@@ -3,7 +3,7 @@ layout: page
 permalink: /editions/
 icon: fas fa-book-open
 order: 3
-title: Editions
+title: Editions/Translations of Capital
 ---
 
 The Table of Content differs somewhat between the Fowkes and the Reitter translations, here's a correspondence table. Numbers in the podcast refer to the Reitter translation.
