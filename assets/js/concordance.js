@@ -237,8 +237,10 @@
           '<label class="cc-check"><input type="checkbox" data-opt="titles"> Titles</label>' +
         '</div>' +
       '</div>' +
-      '<details class="cc-apparatus"><summary>Prefaces, afterwords and editorial material</summary>' +
-        '<div class="cc-apparatus-body"></div></details>' +
+      // Prefaces, afterwords and editorial material: hidden for now. To bring the
+      // section back, uncomment these two lines and the renderApparatus line in render().
+      // '<details class="cc-apparatus"><summary>Prefaces, afterwords and editorial material</summary>' +
+      //   '<div class="cc-apparatus-body"></div></details>' +
       '<div class="cc-view"></div>' +
       '<div class="cc-selbar" aria-live="polite" hidden></div>';
 
@@ -282,7 +284,7 @@
     });
     root.querySelectorAll('[data-opt]').forEach(function (c) { c.checked = !!st[c.getAttribute('data-opt')]; });
     root.style.setProperty('--cc-cols', String(this.cols().length));
-    root.querySelector('.cc-apparatus-body').innerHTML = this.renderApparatus();
+    // root.querySelector('.cc-apparatus-body').innerHTML = this.renderApparatus();   // section hidden for now (see buildShell)
     root.querySelector('.cc-view').innerHTML = st.titles ? this.renderTable() : this.renderMap();
     var bar = root.querySelector('.cc-selbar');
     if (!st.titles && st.sel) {
@@ -551,6 +553,7 @@
     }
 
     return '<div class="cc-grid cc-maphead">' + this.headRow() + '</div>' +
+      '<p class="cc-hint">Block height = length of the text (very short passages are drawn larger so they stay readable). Select a block to see the matching passages.</p>' +
       '<div class="cc-map" style="height:' + lay.height + 'px">' + rulesHtml +
         '<div class="cc-mapcols">' + colsHtml + '</div></div>';
   };
