@@ -1,15 +1,12 @@
 ---
-# Unlisted page: reachable at /editions/ but not shown in the sidebar.
-# To make it a sidebar tab later, move this file into _tabs/, delete the
-# `layout` and `permalink` lines, and add `
 layout: page
 permalink: /editions/
-# icon: fas fa-book-open
-# order: 5
+icon: fas fa-book-open
+order: 3
 title: Editions
 ---
 
-<!-- Your intro text goes here, in Markdown, above the table. -->
+The Table of Content differs somewhat between the Fowkes and the Reitter translations, here's a correspondence table. Numbers in the podcast refer to the Reitter translation.
 
 <link rel="stylesheet" href="{{ '/assets/css/concordance.css' | relative_url }}">
 
