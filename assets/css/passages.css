@@ -1,0 +1,115 @@
+/* Capital, Volume 1: passage finder (see assets/js/passages.js).
+   Colours come from Chirpy's theme variables, as in concordance.css. */
+
+.passages {
+  --pf-panel: var(--card-bg, #1e1e1e);
+  --pf-card: var(--card-header-bg, #292929);
+  --pf-border: var(--main-border-color, #2c2d2d);
+  --pf-text: var(--text-color, #afb0b1);
+  --pf-muted: var(--text-muted-color, #868686);
+  --pf-heading: var(--heading-color, #cccccc);
+  --pf-accent: var(--link-color, #8ab4f8);
+  --pf-accent-rgb: 138, 180, 248;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--pf-text);
+}
+.passages .pf-ed-r { --ed: #f0bd63; --ed-rgb: 240, 189, 99; }
+.passages .pf-ed-f { --ed: #7fb3ff; --ed-rgb: 127, 179, 255; }
+.passages .pf-ed-m { --ed: #c2b3f0; --ed-rgb: 194, 179, 240; }
+[data-bs-theme='light'] .passages .pf-ed-r { --ed: #8a5a00; }
+[data-bs-theme='light'] .passages .pf-ed-f { --ed: #1f5fbf; }
+[data-bs-theme='light'] .passages .pf-ed-m { --ed: #5b46a8; }
+@media (prefers-color-scheme: light) {
+  html:not([data-bs-theme]) .passages .pf-ed-r { --ed: #8a5a00; }
+  html:not([data-bs-theme]) .passages .pf-ed-f { --ed: #1f5fbf; }
+  html:not([data-bs-theme]) .passages .pf-ed-m { --ed: #5b46a8; }
+}
+
+/* ---- form ---- */
+.passages .pf-form {
+  display: flex; flex-wrap: wrap; align-items: flex-end; gap: 0.75rem 1rem;
+  padding: 0.75rem 1rem; margin-bottom: 0.75rem;
+  background: var(--pf-panel); border: 1px solid var(--pf-border); border-radius: 8px;
+}
+.passages .pf-segs { display: flex; border: 1px solid var(--pf-border); border-radius: 6px; overflow: hidden; }
+.passages .pf-seg {
+  min-height: 38px; padding: 0 0.85rem; border: 0; border-left: 1px solid var(--pf-border);
+  background: transparent; color: var(--pf-text); font: inherit; font-size: 0.875rem; cursor: pointer;
+}
+.passages .pf-seg:first-child { border-left: 0; }
+.passages .pf-seg:hover { background: rgba(var(--pf-accent-rgb), 0.12); }
+.passages .pf-seg[aria-pressed='true'] { background: var(--pf-accent); color: #14161a; font-weight: 700; }
+.passages .pf-field { display: flex; flex-direction: column; gap: 2px; margin: 0; }
+.passages .pf-lab { font-size: 0.75rem; color: var(--pf-muted); }
+.passages .pf-opt { font-size: 0.7rem; }
+.passages .pf-field input {
+  width: 6.5rem; min-height: 38px; padding: 0 0.6rem; font: inherit; font-variant-numeric: tabular-nums;
+  color: var(--pf-heading); background: transparent; border: 1px solid var(--pf-border); border-radius: 6px;
+}
+.passages .pf-field input:focus { outline: 2px solid rgba(var(--pf-accent-rgb), 0.6); outline-offset: 1px; }
+.passages .pf-go {
+  min-height: 38px; padding: 0 1.1rem; border: 1px solid var(--pf-accent); border-radius: 6px;
+  background: transparent; color: var(--pf-accent); font: inherit; font-weight: 700; cursor: pointer;
+}
+.passages .pf-go:hover { background: rgba(var(--pf-accent-rgb), 0.12); }
+.passages .pf-status { min-height: 1.5em; margin-bottom: 0.5rem; font-size: 0.875rem; color: var(--pf-muted); }
+
+/* ---- result ---- */
+.passages .pf-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 12px; }
+.passages .pf-head {
+  display: flex; flex-direction: column; gap: 1px; padding: 0.6rem 0.75rem;
+  background: var(--pf-card); border-radius: 6px 6px 0 0;
+}
+.passages .pf-name { font-weight: 700; color: var(--ed); }
+.passages .pf-sub { font-size: 0.75rem; color: var(--pf-muted); }
+.passages .pf-sec {
+  padding: 0.7rem 0.75rem 0.2rem; font-size: 0.8rem; font-weight: 600; line-height: 1.3;
+  color: var(--pf-heading); border-top: 1px solid var(--pf-border); hyphens: auto;
+}
+.passages .pf-cell {
+  display: flex; flex-direction: column; gap: 3px; min-width: 0;
+  padding: 0.5rem 0.75rem; border-top: 1px solid var(--pf-border);
+}
+.passages .pf-sec + .pf-sec + .pf-sec + .pf-cell,
+.passages .pf-sec + .pf-sec + .pf-sec + .pf-cell + .pf-cell,
+.passages .pf-sec + .pf-sec + .pf-sec + .pf-cell + .pf-cell + .pf-cell { border-top: 0; }
+.passages .pf-hit { background: rgba(var(--pf-accent-rgb), 0.08); }
+.passages .pf-edlab { display: none; }
+.passages .pf-par { font-variant-numeric: tabular-nums; line-height: 1.45; }
+.passages .pf-par a { color: var(--pf-text); text-decoration: none; border-bottom: 1px dotted var(--pf-muted); }
+.passages .pf-par a:hover { color: var(--pf-accent); border-bottom-color: var(--pf-accent); }
+.passages .pf-par a.pf-me { color: var(--ed); font-weight: 600; border-bottom-color: var(--ed); }
+.passages .pf-par a.pf-target { box-shadow: 0 0 0 2px rgba(var(--ed-rgb), 0.5); border-radius: 3px; border-bottom: 0; padding: 0 2px; }
+.passages .pf-kind, .passages .pf-notes { font-size: 0.75rem; color: var(--pf-muted); }
+.passages .pf-none { font-size: 0.8rem; font-style: italic; color: var(--pf-muted); }
+.passages .pf-rownote {
+  grid-column: 1 / -1; padding: 0.15rem 0.75rem 0.55rem; font-size: 0.8rem; line-height: 1.4; color: var(--pf-muted);
+}
+.passages .pf-tag {
+  display: inline-block; margin-right: 0.3rem; padding: 0 0.35rem; border: 1px solid var(--pf-border); border-radius: 4px;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.passages .pf-pager { display: flex; justify-content: space-between; margin-top: 0.9rem; font-size: 0.9rem; }
+
+/* ---- phones: one edition under another ---- */
+@media (max-width: 575.98px) {
+  .passages .pf-grid { grid-template-columns: minmax(0, 1fr); }
+  .passages .pf-head, .passages .pf-sec:empty { display: none; }
+  .passages .pf-sec { padding-top: 0.6rem; }
+  .passages .pf-sec + .pf-sec { border-top: 0; padding-top: 0; }
+  .passages .pf-sec::before { color: var(--ed); font-weight: 700; margin-right: 0.35rem; }
+  .passages .pf-sec.pf-ed-r::before { content: 'R'; }
+  .passages .pf-sec.pf-ed-f::before { content: 'F'; }
+  .passages .pf-sec.pf-ed-m::before { content: 'M'; }
+  .passages .pf-cell { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 2px 0.75rem; padding: 0.3rem 0.75rem; }
+  .passages .pf-cell { border-top: 0; }
+  .passages .pf-cell.pf-first { border-top: 1px solid var(--pf-border); padding-top: 0.5rem; }
+  .passages .pf-sec + .pf-sec + .pf-sec + .pf-cell.pf-first { border-top: 0; }
+  .passages .pf-edlab { display: inline; width: 4.5rem; font-size: 0.75rem; font-weight: 700; color: var(--ed); }
+  .passages .pf-form { gap: 0.6rem; }
+  .passages .pf-segs { width: 100%; }
+  .passages .pf-seg { flex: 1; }
+  .passages .pf-field { flex: 1; }
+  .passages .pf-field input { width: 100%; }
+}
