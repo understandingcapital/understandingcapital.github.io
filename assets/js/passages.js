@@ -185,7 +185,6 @@
           var cls = mine ? (i === target ? 'pf-me pf-target' : 'pf-me') : '';
           html += '<span class="pf-par">' + self.link(x.key, i, cls) +
             (KIND[p[3]] ? ' <span class="pf-kind">' + KIND[p[3]] + '</span>' : '') +
-            (p[4].length ? ' <span class="pf-notes">n. ' + p[4].map(esc).join(', ') + '</span>' : '') +
             '</span>';
         });
         html += '</div>';

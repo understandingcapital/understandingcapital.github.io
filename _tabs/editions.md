@@ -7,6 +7,7 @@ title: Editions
 ---
 
 The Table of Content differs somewhat between the Fowkes and the Reitter translations, here's a correspondence table. Numbers in the podcast refer to the Reitter translation.
+There's also a paragraph-matching tool for the Reitter, Fowkes, and (German) MEW 23 editions [available here](/passages/), which may be useful for reading groups that read different editions.
 
 <link rel="stylesheet" href="{{ '/assets/css/concordance.css' | relative_url }}">
 
